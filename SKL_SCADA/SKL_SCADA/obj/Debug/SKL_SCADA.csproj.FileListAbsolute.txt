@@ -2,3 +2,5 @@ D:\GitHub\SKL_SCADA\SKL_SCADA\SKL_SCADA\bin\SKL_SCADA.dll
 D:\GitHub\SKL_SCADA\SKL_SCADA\SKL_SCADA\bin\SKL_SCADA.pdb
 D:\GitHub\SKL_SCADA\SKL_SCADA\SKL_SCADA\obj\Debug\SKL_SCADA.dll
 D:\GitHub\SKL_SCADA\SKL_SCADA\SKL_SCADA\obj\Debug\SKL_SCADA.pdb
+D:\GitHub\SKL_SCADA\SKL_SCADA\SKL_SCADA\obj\Debug\SKL_SCADA.Properties.Resources.resources
+D:\GitHub\SKL_SCADA\SKL_SCADA\SKL_SCADA\obj\Debug\SKL_SCADA.csproj.GenerateResource.Cache
