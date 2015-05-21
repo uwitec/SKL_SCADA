@@ -1,0 +1,101 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="HeadFoot.master.cs" Inherits="SKL_SCADA.HeadFoot" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>SKL_SCADA</title>
+    <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
+		<script type="text/javascript" src="js/wow.min.js"></script>
+		<link href="css/style.css" rel='stylesheet' type='text/css' />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body>
+    <div class="bg">
+		<div class="container">
+		<!----- start-header---->
+			<div id="home" class="header wow bounceInDown">
+				<div class="top-header">
+					<div class="logo wow bounceInDown">
+						<a href="#"><img src="images/logo4.png" alt="" title="logo" /></a>
+					</div>
+					<!----start-top-nav---->
+					<nav class="top-nav wow bounceInDown">
+						<span class="menu"> </span>
+						<ul class="top-nav">
+							<li class="active"><a href="#" class="scroll">主页</a></li>
+							<li><a href="#">数据采集</a></li>
+							<li><a href="#">生产过程追溯</a></li>
+							<li><a href="#">生产状态可视化</a></li>
+						</ul>
+					</nav>
+					<div class="clearfix"> </div>
+				</div>
+				</div>
+				<!----- banner ---->
+				<!----- banner ---->
+				<div class="banner text-right">
+					<div class="container">
+						<h1>一体化管控系统</h1>	
+							<div class="clearfix"></div>
+						<p>实现纸盒包装生产过程跟踪技术，保障食品安全，提高高速环境下生产线的平稳性和可靠性。</p>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+				<!----- banner ---->
+			</div>
+    </div>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+    <div class="footer">
+		<div class="container">
+			<div class="footer-grids">
+				<div class="col-md-2 footer-grid ftr-sec wow fadeInLeft">
+					<h3>快速导航</h3>
+					<ul>
+						<li><a href="#">主页</a></li>
+						<li><a href="#">数据采集</a></li>
+						<li><a href="#">生产过程追溯</a></li>
+						<li><a href="#">生产状态可视化</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3 footer-grid ftr-sec wow fadeInLeft">
+					<h3>版权信息</h3>
+					<ul>
+						<li><a href="#">上海斯开龙包装有限公司版权所有</a></li>
+						<li><a href="#">Copyright ©2005-2011</a></li>
+						<li><a href="#">沪ICP备07002353</a></li>								
+					</ul>
+				</div>
+				<div class="col-md-3 footer-grid ftr-sec wow fadeInRight">
+					<h3>营销联系方式</h3>
+					<ul class="location"> 
+						<li><a class="phn" href="#"><span> </span>营销电话:021-3115 1115</a></li>
+						<li><a class="phn" href="#"><span> </span>传真:021-3115 7990</a></li>							
+					</ul>
+				</div>
+				<div class="col-md-4 footer-grid ftr-sec ftr wow fadeInRight">
+					<h3>联系我们</h3>
+					<ul class="location">
+						<li><a class="hm" href="#"><span> </span>上海市金山工业园区(201506)天工路285弄16号</a></li>
+						<li><a class="phn" href="#"><span> </span>电话:021-3728 6315</a></li>
+                        <li><a class="phn" href="#"><span> </span>传真:021-3728 6317</a></li>
+					</ul>							
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<p class="copy-right wow bounceInRight">2015 &copy; Design by SJTU-CIMS</p>
+		</div>
+	</div>
+</body>
+</html>

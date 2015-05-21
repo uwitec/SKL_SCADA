@@ -12,3 +12,7 @@ G:\360云盘\2013~2014 上交CIMS\实验室项目\上飞第二期 可视化监�
 G:\360云盘\2013~2014 上交CIMS\实验室项目\上飞第二期 可视化监控\ASP.NET三层架构（模板）\Ministry of Railways\Jc_MOR\Jc_MOR\MODEL\obj\Debug\ResolveAssemblyReference.cache
 G:\360云盘\2013~2014 上交CIMS\实验室项目\上飞第二期 可视化监控\ASP.NET三层架构（模板）\Ministry of Railways\Jc_MOR\Jc_MOR\MODEL\obj\Debug\MODEL.dll
 G:\360云盘\2013~2014 上交CIMS\实验室项目\上飞第二期 可视化监控\ASP.NET三层架构（模板）\Ministry of Railways\Jc_MOR\Jc_MOR\MODEL\obj\Debug\MODEL.pdb
+D:\GitHub\SKL_SCADA\SKL_SCADA\MODEL\bin\Debug\MODEL.dll
+D:\GitHub\SKL_SCADA\SKL_SCADA\MODEL\bin\Debug\MODEL.pdb
+D:\GitHub\SKL_SCADA\SKL_SCADA\MODEL\obj\Debug\MODEL.dll
+D:\GitHub\SKL_SCADA\SKL_SCADA\MODEL\obj\Debug\MODEL.pdb

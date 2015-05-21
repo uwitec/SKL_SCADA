@@ -31,3 +31,14 @@ G:\360云盘\2013~2014 上交CIMS\实验室项目\上飞第二期 可视化监�
 G:\360云盘\2013~2014 上交CIMS\实验室项目\上飞第二期 可视化监控\ASP.NET三层架构（模板）\Ministry of Railways\Jc_MOR\Jc_MOR\DAL\obj\Debug\ResolveAssemblyReference.cache
 G:\360云盘\2013~2014 上交CIMS\实验室项目\上飞第二期 可视化监控\ASP.NET三层架构（模板）\Ministry of Railways\Jc_MOR\Jc_MOR\DAL\obj\Debug\DAL.dll
 G:\360云盘\2013~2014 上交CIMS\实验室项目\上飞第二期 可视化监控\ASP.NET三层架构（模板）\Ministry of Railways\Jc_MOR\Jc_MOR\DAL\obj\Debug\DAL.pdb
+D:\GitHub\SKL_SCADA\SKL_SCADA\DAL\bin\Debug\DAL.dll
+D:\GitHub\SKL_SCADA\SKL_SCADA\DAL\bin\Debug\DAL.pdb
+D:\GitHub\SKL_SCADA\SKL_SCADA\DAL\bin\Debug\Common.dll
+D:\GitHub\SKL_SCADA\SKL_SCADA\DAL\bin\Debug\DBUtility.dll
+D:\GitHub\SKL_SCADA\SKL_SCADA\DAL\bin\Debug\MODEL.dll
+D:\GitHub\SKL_SCADA\SKL_SCADA\DAL\bin\Debug\Common.pdb
+D:\GitHub\SKL_SCADA\SKL_SCADA\DAL\bin\Debug\DBUtility.pdb
+D:\GitHub\SKL_SCADA\SKL_SCADA\DAL\bin\Debug\MODEL.pdb
+D:\GitHub\SKL_SCADA\SKL_SCADA\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\GitHub\SKL_SCADA\SKL_SCADA\DAL\obj\Debug\DAL.dll
+D:\GitHub\SKL_SCADA\SKL_SCADA\DAL\obj\Debug\DAL.pdb
