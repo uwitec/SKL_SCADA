@@ -26,7 +26,7 @@ ul{
 .bg{
 	background:url(../images/banner.jpg) no-repeat 0px 0px;
 	background-size:100%;
-	min-height:400px;
+	min-height:360px;
 }
 .header{
 	/*background: #2f3837;*/
@@ -404,7 +404,7 @@ nav a:hover{
 /*---- footer -----*/
 .footer{
 	background:#2f3837;
-	padding:3em 0 2em 0;
+	padding:2em 0 2em 0;
 	border-top: 2px solid #FD5F40;
 }
 .footer-grid h3{
@@ -862,14 +862,15 @@ line-height:1.8em;
 margin:1em 0 3em 0;
 }
 .team-grid h2{
-color: #D13F31;
+color: white;
+    font-weight: bold;
 margin-bottom:0.5em;
 padding:12px 0;
-border-bottom: 1px solid #999999;
-border-top: 1px solid #999999; 
+border-bottom: 1px solid #2980b9;
+    background-color: #2980b9;
 }
 .team-grid p{
-margin:1.5em 0 2em 0;
+margin:10px;
 font-size:0.9em;
 }
 .teams img{
@@ -902,7 +903,7 @@ color:#FD5331;
 	-webkit-transition: 0.5s ease;
 }
 .team-sidebar {
-width: 71%;
+width: 90%;
 margin: 0 auto;
 }
 .team-sidebar ul li {
@@ -1079,9 +1080,6 @@ border:1px solid #FD5331;
 /*--contact--*/
 /*----responsive-menu-start---*/
 @media(max-width:1280px){
-.bg {
-min-height: 435px;
-}
 .logo a img {
 background-size: 100%;
 width: 75%;
@@ -1120,7 +1118,7 @@ font-size: 2.4em;
 width: 65%;
 }
 .bg {
-min-height: 398px;
+	min-height:360px;
 }
 .header {
 height: 54px;

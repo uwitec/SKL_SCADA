@@ -15,3 +15,4 @@ D:\GitHub\SKL_SCADA\SKL_SCADA\SKL_SCADA\bin\DAL.pdb
 D:\GitHub\SKL_SCADA\SKL_SCADA\SKL_SCADA\bin\DBUtility.pdb
 D:\GitHub\SKL_SCADA\SKL_SCADA\SKL_SCADA\bin\MODEL.pdb
 D:\GitHub\SKL_SCADA\SKL_SCADA\SKL_SCADA\obj\Debug\SKL_SCADA.csprojResolveAssemblyReference.cache
+D:\GitHub\SKL_SCADA\SKL_SCADA\SKL_SCADA\obj\Debug\SKL_SCADA.dll.licenses
