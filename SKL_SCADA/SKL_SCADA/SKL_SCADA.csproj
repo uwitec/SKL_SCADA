@@ -51,6 +51,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="BatchRaw.aspx" />
     <Content Include="contact.html" />
     <Content Include="css\animate.css" />
     <Content Include="css\bootstrap.css" />
@@ -103,6 +104,13 @@
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BatchRaw.aspx.cs">
+      <DependentUpon>BatchRaw.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BatchRaw.aspx.designer.cs">
+      <DependentUpon>BatchRaw.aspx</DependentUpon>
+    </Compile>
     <Compile Include="HeadFoot.Master.cs">
       <DependentUpon>HeadFoot.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
