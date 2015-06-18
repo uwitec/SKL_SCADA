@@ -1,5 +1,6 @@
 html, body{
-    font-family:  @Î¢ÈíÑÅºÚ, "Open Sans", sans-serif;
+    /*font-family:  "Î¢ÈíÑÅºÚ","Open Sans", sans-serif;*/
+    font-family: ¡°SimSun¡±,¡±Arial Narrow¡±;
     font-size: 100%;
   	 background: #FFf;
   	 -webkit-font-smoothing: antialiased;
@@ -571,15 +572,16 @@ color:#fff;
 text-decoration: none;
 }
 .tour-caption {
-	display:none;
+    display:none;
 	top: 0;
 	width: 90%;
 	position: absolute;
-	background: rgba(80, 96, 131, 0.76);
+    background: rgba(80, 96, 131, 0.76);
 	height: 45%;
 	text-align: center;
 	padding-top: 16%;
 }
+
 .tour-caption p{
 color:#fff;
 }
