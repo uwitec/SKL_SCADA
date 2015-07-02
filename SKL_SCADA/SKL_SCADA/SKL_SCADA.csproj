@@ -56,6 +56,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="BatchFill.aspx" />
+    <Content Include="BatchPack.aspx" />
     <Content Include="BatchRaw.aspx" />
     <Content Include="contact.html" />
     <Content Include="css\animate.css" />
@@ -110,6 +112,20 @@
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BatchFill.aspx.cs">
+      <DependentUpon>BatchFill.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BatchFill.aspx.designer.cs">
+      <DependentUpon>BatchFill.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BatchPack.aspx.cs">
+      <DependentUpon>BatchPack.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BatchPack.aspx.designer.cs">
+      <DependentUpon>BatchPack.aspx</DependentUpon>
+    </Compile>
     <Compile Include="BatchRaw.aspx.cs">
       <DependentUpon>BatchRaw.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
