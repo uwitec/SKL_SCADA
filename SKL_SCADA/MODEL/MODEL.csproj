@@ -40,12 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MachineState.cs" />
+    <Compile Include="BatchFill.cs" />
+    <Compile Include="BatchPack.cs" />
+    <Compile Include="BatchRaw.cs" />
+    <Compile Include="ProcessMaterial.cs" />
+    <Compile Include="Product.cs" />
+    <Compile Include="ProductProcess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StationFlight.cs" />
-    <Compile Include="TagMachine.cs" />
-    <Compile Include="UserInfo.cs" />
-    <Compile Include="WorkGroupState.cs" />
+    <Compile Include="RawMaterial.cs" />
+    <Compile Include="Supplier.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
