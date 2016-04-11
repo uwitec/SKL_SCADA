@@ -59,7 +59,6 @@
     <Content Include="BatchFill.aspx" />
     <Content Include="BatchPack.aspx" />
     <Content Include="BatchRaw.aspx" />
-    <Content Include="contact.html" />
     <Content Include="css\animate.css" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\style.css" />
@@ -90,7 +89,6 @@
     <Content Include="images\t3.jpg" />
     <Content Include="images\t4.jpg" />
     <Content Include="images\zoom.png" />
-    <Content Include="index.html" />
     <Content Include="js\flexmenu.min.js" />
     <Content Include="js\ios-orientationchange-fix.min.js" />
     <Content Include="js\jquery.flexisel.js" />
@@ -100,9 +98,6 @@
     <Content Include="js\modernizr.custom.js" />
     <Content Include="js\wow.min.js" />
     <Content Include="MachinePage.aspx" />
-    <Content Include="port.html" />
-    <Content Include="service.html" />
-    <Content Include="team.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

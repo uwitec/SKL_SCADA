@@ -17,7 +17,7 @@
 					<div class="tour-caption">
 					    <p>该设备的情况为：一切正常。</p>
 					</div>
-					<h4>设备1</h4>
+					<h4>车间总体信息</h4>
 					<p class="sg">该设备的情况为：一切正常。</p>
 					<a class="btn" href="#">更多信息</a>
 				</div>
@@ -27,7 +27,7 @@
 					<div class="tour-caption">
 					    <p>该设备的情况为：一切正常。</p>
 					</div>
-					<h4>设备2</h4>
+					<h4>机器人总线状态</h4>
 					<p class="sg">该设备的情况为：一切正常。</p>
 					<a class="btn" href="#">更多信息</a>							  
 				</div>
@@ -37,7 +37,7 @@
 						<div class="tour-caption">
 						<p>该设备的情况为：一切正常。</p>
 						</div>
-						<h4>设备3</h4>
+						<h4>灌装机1</h4>
 						<p class="sg">该设备的情况为：一切正常。</p>
 						<a class="btn" href="#">更多信息</a>							  
 				</div>
@@ -47,7 +47,7 @@
 						<div class="tour-caption">
 						<p >该设备的情况为：一切正常。</p>
 						</div>
-						<h4>设备4</h4>
+						<h4>配料机</h4>
 						<p class="sg">该设备的情况为：一切正常。</p>
 						<a class="btn" href="#">更多信息</a>							  
 				</div>
@@ -61,7 +61,7 @@
 						<div class="tour-caption">
 						<p>该设备的情况为：一切正常。</p>
 						</div>
-						<h4>设备1</h4>
+						<h4>高温杀菌釜</h4>
 						<p class="sg">该设备的情况为：一切正常。</p>
 						<a class="btn" href="#">更多信息</a>							  
 				</div>
@@ -71,7 +71,7 @@
 						<div class="tour-caption">
 						<p>该设备的情况为：一切正常。</p>
 						</div>
-						<h4>设备2</h4>
+						<h4>包装机</h4>
 						<p class="sg">该设备的情况为：一切正常。</p>
 						<a class="btn" href="#">更多信息</a>							 
 				</div>
@@ -81,7 +81,7 @@
 						<div class="tour-caption">
 						<p>该设备的情况为：一切正常。</p>
 						</div>
-						<h4>设备3</h4>
+						<h4>灌装机2</h4>
 						<p class="sg">该设备的情况为：一切正常。</p>
 						<a class="btn" href="#">更多信息</a>							 
 				</div>
@@ -91,7 +91,7 @@
 						<div class="tour-caption">
 						<p>该设备的情况为：一切正常。</p>
 						</div>
-						<h4>设备4</h4>
+						<h4>报警状态</h4>
 						<p class="sg">该设备的情况为：一切正常。</p>
 						<a class="btn" href="#">更多信息</a>							  
 				</div>

@@ -1,8 +1,15 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/HeadFoot.Master" AutoEventWireup="true" CodeBehind="BatchRaw.aspx.cs" Inherits="SKL_SCADA.BatchRaw" %>
 
 <%@ Register Assembly="DevExpress.Web.v13.1, Version=13.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+    Namespace="DevExpress.Web.ASPxCallback" TagPrefix="dx" %>
+
+<%@ Register Assembly="DevExpress.Web.v13.1, Version=13.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+    Namespace="DevExpress.Web.ASPxCallbackPanel" TagPrefix="dx" %>
+
+<%@ Register Assembly="DevExpress.Web.v13.1, Version=13.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
     Namespace="DevExpress.Web.ASPxGridView" TagPrefix="dx" %>
 <%@ Register assembly="DevExpress.Web.v13.1, Version=13.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxEditors" tagprefix="dx" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxPanel" Assembly="DevExpress.Web.v13.1, Version=13.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -38,6 +45,7 @@
 				<div class="clear"> </div>
 			</div>
             <div class="col-md-9 team-grid text-center">
+            
                 <div class="bigBlock">									 
 				    <h2>原材料批次信息录入</h2>
 				    <p class="text-left">在原材料批次录入过程中应该注意：批次号、原材料、数量、进入时间这四栏禁止为“空”，
@@ -53,9 +61,17 @@
                         <div class="conBlock">
                             <div class="conBlockL"><h3 class="text-left">原材料：</h3></div>
                             <div class="conBlockR">
-                                <dx:ASPxComboBox ID="ASPxComboBox1" runat="server" ValueType="System.String"
-                                Width="100%" Height="30px" Theme="Glass">
+                                <dx:ASPxComboBox ID="ASPxComboBox1" ClientInstanceName="rawName" runat="server"
+                                Width="100%" Height="30px" Theme="Glass" DataSourceID="SqlDataSource1" >
+                                    <Columns>
+                                        <dx:ListBoxColumn FieldName="RID" />
+                                        <dx:ListBoxColumn FieldName="RName" />
+                                        <dx:ListBoxColumn FieldName="RSpecification" />
+                                    </Columns>
                                 </dx:ASPxComboBox>
+                                <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                                    ConnectionString="<%$ ConnectionStrings:SKL_SCADAConnectionString %>" 
+                                    SelectCommand="SELECT [RID],[RName],[RSpecification] FROM [RawMaterial]"></asp:SqlDataSource>
                             </div>
                         </div>
                         <div class="conBlock">
@@ -216,53 +232,68 @@
                         <div class="conBlock">
                             <div class="conBlockL"><h3 class="text-left">供应商：</h3></div>
                             <div class="conBlockR">
-                                <dx:ASPxTextBox ID="ASPxTextBox9" runat="server" Width="100%" Height="30px" Theme="Glass">
+                                <dx:ASPxTextBox ID="ASPxTextBox9" ClientInstanceName="S1" runat="server" Width="100%" Height="30px" Theme="Glass">
                                 </dx:ASPxTextBox>
                             </div>
                         </div>
                         <div class="conBlock">
                             <div class="conBlockL"><h3 class="text-left">电话：</h3></div>
                             <div class="conBlockR">
-                                <dx:ASPxTextBox ID="ASPxTextBox10" runat="server" Width="100%" Height="30px" Theme="Glass">
+                                <dx:ASPxTextBox ID="ASPxTextBox10" ClientInstanceName="S2" runat="server" Width="100%" Height="30px" Theme="Glass">
                                 </dx:ASPxTextBox>
                             </div>
                         </div>
                         <div class="conBlock">
                             <div class="conBlockL"><h3 class="text-left">E-mail：</h3></div>
                             <div class="conBlockR">
-                                <dx:ASPxTextBox ID="ASPxTextBox11" runat="server" Width="100%" Height="30px" Theme="Glass">
+                                <dx:ASPxTextBox ID="ASPxTextBox11" ClientInstanceName="S3" runat="server" Width="100%" Height="30px" Theme="Glass">
                                 </dx:ASPxTextBox>
                             </div>
                         </div>
                         <div class="conBlock">
                             <div class="conBlockL"><h3 class="text-left">联系人：</h3></div>
                             <div class="conBlockR">
-                                <dx:ASPxTextBox ID="ASPxTextBox12" runat="server" Width="100%" Height="30px" Theme="Glass">
+                                <dx:ASPxTextBox ID="ASPxTextBox12" ClientInstanceName="S4" runat="server" Width="100%" Height="30px" Theme="Glass">
                                 </dx:ASPxTextBox>
                             </div>
                         </div>
                         <div class="conBlock">
                             <div class="conBlockL"><h3 class="text-left">传真：</h3></div>
                             <div class="conBlockR">
-                                <dx:ASPxTextBox ID="ASPxTextBox14" runat="server" Width="100%" Height="30px" Theme="Glass">
+                                <dx:ASPxTextBox ID="ASPxTextBox14" ClientInstanceName="S5" runat="server" Width="100%" Height="30px" Theme="Glass">
                                 </dx:ASPxTextBox>
                             </div>
                         </div>
                         <div class="conBlock">
                             <div class="conBlockL"><h3 class="text-left">备注：</h3></div>
                             <div class="conBlockR">
-                                <dx:ASPxTextBox ID="ASPxTextBox13" runat="server" Width="100%" Height="30px" Theme="Glass">
+                                <dx:ASPxTextBox ID="ASPxTextBox13" ClientInstanceName="S6" runat="server" Width="100%" Height="30px" Theme="Glass">
                                 </dx:ASPxTextBox>
                             </div>
                         </div>
                         <div class="conBlock">
                             <div class="conBlockL"></div>
                             <div class="conBlockR">
-                                <dx:ASPxButton ID="ASPxButton5" runat="server" Text="录入供应商" Width="100%" Height="30px" Theme="Glass">
+                                <dx:ASPxButton ID="ASPxButton5" runat="server" Text="录入供应商" Width="100%" 
+                                    Height="30px" Theme="Glass">
+                                    <ClientSideEvents Click="function(s, e) {
+                                    SupBack.PerformCallback(
+                                    S1.GetValue().toString()+'|'+
+                                    S2.GetValue().toString()+'|'+
+                                    S3.GetValue().toString()+'|'+
+                                    S4.GetValue().toString()+'|'+
+                                    S5.GetValue().toString()+'|'+
+                                    S6.GetValue().toString());
+                                    }" />
                                 </dx:ASPxButton>
                             </div>
                         </div>
-                        <div class="conBlock"></div>
+                        <div class="conBlock">
+                            <dx:ASPxCallback ID="ASPxCallback_Supplier" runat="server" 
+                                ClientInstanceName="SupBack" oncallback="ASPxCallback_Supplier_Callback">
+                                <ClientSideEvents CallbackComplete="function(s, e) {xxx.PerformCallback();alert();}" />
+                            </dx:ASPxCallback>
+                        </div>
                         <div class="conBlock">
                             <div class="conBlockL"></div>
                             <div class="conBlockR">
@@ -273,7 +304,8 @@
                     </div>
                     <div class="infoCheck">
                         <dx:ASPxGridView ID="ASPxGridView3" runat="server" AutoGenerateColumns="False" 
-                            EnableTheming="True" Theme="Glass" Width="100%" Font-Size="14px">
+                            EnableTheming="True" Theme="Glass" Width="100%" Font-Size="14px" ClientInstanceName="xxx"
+                            OnCustomCallback="ASPxGridView3_CustomCallback">
                             <Columns>
                                 <dx:GridViewDataTextColumn Caption="供应商名称" FieldName="SupplierName" VisibleIndex="0">
                                 </dx:GridViewDataTextColumn>
@@ -287,6 +319,15 @@
                                 </dx:GridViewDataTextColumn>
                                 <dx:GridViewDataTextColumn Caption="备注" FieldName="SRemarks" VisibleIndex="5">
                                 </dx:GridViewDataTextColumn>
+                                <dx:GridViewCommandColumn Caption="操作" ShowSelectCheckbox="True" 
+                                    VisibleIndex="6">
+                                    <EditButton Text="编辑" Visible="True">
+                                    </EditButton>
+                                    <DeleteButton Text="删除" Visible="True">
+                                    </DeleteButton>
+                                    <ClearFilterButton Visible="True">
+                                    </ClearFilterButton>
+                                </dx:GridViewCommandColumn>
                             </Columns>
                         </dx:ASPxGridView>
                     </div>

@@ -16,4 +16,3 @@ D:\GitHub\SKL_SCADA\SKL_SCADA\Common\bin\Debug\Common.dll
 D:\GitHub\SKL_SCADA\SKL_SCADA\Common\bin\Debug\Common.pdb
 D:\GitHub\SKL_SCADA\SKL_SCADA\Common\obj\Debug\Common.dll
 D:\GitHub\SKL_SCADA\SKL_SCADA\Common\obj\Debug\Common.pdb
-D:\GitHub\SKL_SCADA\SKL_SCADA\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache

@@ -70,6 +70,13 @@ namespace MODEL
             get { return _brid; }
             set { _brid = value; }
         }
-
+        /// <summary>
+        /// 到达时间
+        /// </summary>
+        public DateTime ApproachTime
+        {
+            get { return _approachTime; }
+            set { _approachTime = value; }
+        }
     }
 }
