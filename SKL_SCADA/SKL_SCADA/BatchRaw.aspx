@@ -1,13 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/HeadFoot.Master" AutoEventWireup="true" CodeBehind="BatchRaw.aspx.cs" Inherits="SKL_SCADA.BatchRaw" %>
-
-<%@ Register Assembly="DevExpress.Web.v13.1, Version=13.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
-    Namespace="DevExpress.Web.ASPxCallbackPanel" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v13.1, Version=13.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
-    Namespace="DevExpress.Web.ASPxCallback" TagPrefix="dx" %>
 <%@ Register Assembly="DevExpress.Web.v13.1, Version=13.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
     Namespace="DevExpress.Web.ASPxGridView" TagPrefix="dx" %>
 <%@ Register assembly="DevExpress.Web.v13.1, Version=13.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxEditors" tagprefix="dx" %>
-<%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxPanel" Assembly="DevExpress.Web.v13.1, Version=13.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -299,7 +293,8 @@
                     </div>
                     <div class="infoCheck">
                         <dx:ASPxGridView ID="ASPxGridView3" ClientInstanceName="Grid3" runat="server" AutoGenerateColumns="False" 
-                            EnableTheming="True" Theme="Glass" Width="100%" Font-Size="14px" oncustomcallback="ASPxGridView3_CustomCallback">
+                            EnableTheming="True" Theme="Glass" Width="100%" Font-Size="14px" 
+                            oncustomcallback="ASPxGridView3_CustomCallback" KeyFieldName="dataEditing;">
                             <Columns>
                                 <dx:GridViewDataTextColumn Caption="供应商名称" FieldName="SupplierName" VisibleIndex="0">
                                 </dx:GridViewDataTextColumn>
@@ -323,6 +318,8 @@
                                     </ClearFilterButton>
                                 </dx:GridViewCommandColumn>
                             </Columns>
+                            <SettingsBehavior ConfirmDelete="True" />
+                            <SettingsEditing Mode="Inline" />
                         </dx:ASPxGridView>
                     </div>
                 </div>

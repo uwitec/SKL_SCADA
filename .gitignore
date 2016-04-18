@@ -254,3 +254,6 @@ paket-files/
 SKL_SCADA/SKL_SCADA/obj/Debug/SKL_SCADA.dll
 *.pdb
 *.suo
+*.dll
+SKL_SCADA/SKL_SCADA/bin/SKL_SCADA.dll
+*.pdb

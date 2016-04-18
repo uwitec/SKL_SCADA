@@ -1,24 +1,32 @@
 ﻿using System;
 using System.Data;
+using DevExpress.Web.ASPxGridView;
 
 namespace SKL_SCADA
 {
     public partial class BatchRaw : System.Web.UI.Page
     {
-        public DataTable supplierTable ;
+        private DataTable supplierTable ;
+
+        void InitSupTable()
+        {
+            DataTable supplierTable = new DataTable();
+            supplierTable.Columns.Add("SupplierName");
+            supplierTable.Columns.Add("STel");
+            supplierTable.Columns.Add("SEmail");
+            supplierTable.Columns.Add("SLinkman");
+            supplierTable.Columns.Add("SFax");
+            supplierTable.Columns.Add("SRemarks");
+            Session["supplierTable"] = supplierTable;
+        }
 
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
             {
-                DataTable supplierTable = new DataTable();
-                supplierTable.Columns.Add("SupplierName");
-                supplierTable.Columns.Add("STel");
-                supplierTable.Columns.Add("SEmail");
-                supplierTable.Columns.Add("SLinkman");
-                supplierTable.Columns.Add("SFax");
-                supplierTable.Columns.Add("SRemarks");
-                Session["supplierTable"] = supplierTable;
+                InitSupTable();
+
+
             }
             ASPxGridView3.DataSource = Session["supplierTable"] as DataTable;
             ASPxGridView3.DataBind();
