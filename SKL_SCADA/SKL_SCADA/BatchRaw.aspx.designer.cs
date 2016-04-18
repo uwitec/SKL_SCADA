@@ -13,6 +13,15 @@ namespace SKL_SCADA {
     public partial class BatchRaw {
         
         /// <summary>
+        /// ScriptManager1 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.ScriptManager ScriptManager1;
+        
+        /// <summary>
         /// ASPxTextBox1 控件。
         /// </summary>
         /// <remarks>
@@ -245,15 +254,6 @@ namespace SKL_SCADA {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::DevExpress.Web.ASPxEditors.ASPxButton ASPxButton5;
-        
-        /// <summary>
-        /// ASPxCallback_Supplier 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxCallback.ASPxCallback ASPxCallback_Supplier;
         
         /// <summary>
         /// ASPxButton6 控件。

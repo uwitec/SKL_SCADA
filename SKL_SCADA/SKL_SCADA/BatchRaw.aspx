@@ -1,11 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/HeadFoot.Master" AutoEventWireup="true" CodeBehind="BatchRaw.aspx.cs" Inherits="SKL_SCADA.BatchRaw" %>
 
 <%@ Register Assembly="DevExpress.Web.v13.1, Version=13.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
-    Namespace="DevExpress.Web.ASPxCallback" TagPrefix="dx" %>
-
-<%@ Register Assembly="DevExpress.Web.v13.1, Version=13.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
     Namespace="DevExpress.Web.ASPxCallbackPanel" TagPrefix="dx" %>
-
+<%@ Register Assembly="DevExpress.Web.v13.1, Version=13.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+    Namespace="DevExpress.Web.ASPxCallback" TagPrefix="dx" %>
 <%@ Register Assembly="DevExpress.Web.v13.1, Version=13.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
     Namespace="DevExpress.Web.ASPxGridView" TagPrefix="dx" %>
 <%@ Register assembly="DevExpress.Web.v13.1, Version=13.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxEditors" tagprefix="dx" %>
@@ -13,7 +11,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
     <div class="team">
 		<div class="container">
 			<h3>批次信息录入业务流程介绍</h3>
@@ -274,25 +273,21 @@
                         <div class="conBlock">
                             <div class="conBlockL"></div>
                             <div class="conBlockR">
-                                <dx:ASPxButton ID="ASPxButton5" runat="server" Text="录入供应商" Width="100%" 
+                                <dx:ASPxButton ID="ASPxButton5" AutoPostBack="False"  runat="server" Text="录入供应商" Width="100%" 
                                     Height="30px" Theme="Glass">
                                     <ClientSideEvents Click="function(s, e) {
-                                    SupBack.PerformCallback(
+                                    Grid3.PerformCallback(
                                     S1.GetValue().toString()+'|'+
                                     S2.GetValue().toString()+'|'+
                                     S3.GetValue().toString()+'|'+
                                     S4.GetValue().toString()+'|'+
                                     S5.GetValue().toString()+'|'+
                                     S6.GetValue().toString());
-                                    }" />
+                                    }"/>
                                 </dx:ASPxButton>
                             </div>
                         </div>
                         <div class="conBlock">
-                            <dx:ASPxCallback ID="ASPxCallback_Supplier" runat="server" 
-                                ClientInstanceName="SupBack" oncallback="ASPxCallback_Supplier_Callback">
-                                <ClientSideEvents CallbackComplete="function(s, e) {xxx.PerformCallback();alert();}" />
-                            </dx:ASPxCallback>
                         </div>
                         <div class="conBlock">
                             <div class="conBlockL"></div>
@@ -303,9 +298,8 @@
                         </div>
                     </div>
                     <div class="infoCheck">
-                        <dx:ASPxGridView ID="ASPxGridView3" runat="server" AutoGenerateColumns="False" 
-                            EnableTheming="True" Theme="Glass" Width="100%" Font-Size="14px" ClientInstanceName="xxx"
-                            OnCustomCallback="ASPxGridView3_CustomCallback">
+                        <dx:ASPxGridView ID="ASPxGridView3" ClientInstanceName="Grid3" runat="server" AutoGenerateColumns="False" 
+                            EnableTheming="True" Theme="Glass" Width="100%" Font-Size="14px" oncustomcallback="ASPxGridView3_CustomCallback">
                             <Columns>
                                 <dx:GridViewDataTextColumn Caption="供应商名称" FieldName="SupplierName" VisibleIndex="0">
                                 </dx:GridViewDataTextColumn>
