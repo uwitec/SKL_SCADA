@@ -1,9 +1,5 @@
 D:\GitHub\SKL_SCADA\SKL_SCADA\SKL_SCADA\bin\SKL_SCADA.dll
 D:\GitHub\SKL_SCADA\SKL_SCADA\SKL_SCADA\bin\SKL_SCADA.pdb
-D:\GitHub\SKL_SCADA\SKL_SCADA\SKL_SCADA\obj\Debug\SKL_SCADA.dll
-D:\GitHub\SKL_SCADA\SKL_SCADA\SKL_SCADA\obj\Debug\SKL_SCADA.pdb
-D:\GitHub\SKL_SCADA\SKL_SCADA\SKL_SCADA\obj\Debug\SKL_SCADA.Properties.Resources.resources
-D:\GitHub\SKL_SCADA\SKL_SCADA\SKL_SCADA\obj\Debug\SKL_SCADA.csproj.GenerateResource.Cache
 D:\GitHub\SKL_SCADA\SKL_SCADA\SKL_SCADA\bin\BLL.dll
 D:\GitHub\SKL_SCADA\SKL_SCADA\SKL_SCADA\bin\Common.dll
 D:\GitHub\SKL_SCADA\SKL_SCADA\SKL_SCADA\bin\DAL.dll
@@ -15,4 +11,8 @@ D:\GitHub\SKL_SCADA\SKL_SCADA\SKL_SCADA\bin\DAL.pdb
 D:\GitHub\SKL_SCADA\SKL_SCADA\SKL_SCADA\bin\DBUtility.pdb
 D:\GitHub\SKL_SCADA\SKL_SCADA\SKL_SCADA\bin\MODEL.pdb
 D:\GitHub\SKL_SCADA\SKL_SCADA\SKL_SCADA\obj\Debug\SKL_SCADA.csprojResolveAssemblyReference.cache
+D:\GitHub\SKL_SCADA\SKL_SCADA\SKL_SCADA\obj\Debug\SKL_SCADA.Properties.Resources.resources
+D:\GitHub\SKL_SCADA\SKL_SCADA\SKL_SCADA\obj\Debug\SKL_SCADA.csproj.GenerateResource.Cache
 D:\GitHub\SKL_SCADA\SKL_SCADA\SKL_SCADA\obj\Debug\SKL_SCADA.dll.licenses
+D:\GitHub\SKL_SCADA\SKL_SCADA\SKL_SCADA\obj\Debug\SKL_SCADA.dll
+D:\GitHub\SKL_SCADA\SKL_SCADA\SKL_SCADA\obj\Debug\SKL_SCADA.pdb

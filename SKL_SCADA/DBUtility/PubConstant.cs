@@ -13,7 +13,7 @@ namespace DBUtility
             get
             {
                 //string _connectionString = ConfigurationManager.AppSettings["ConnectionString"];
-                string _connectionString = "Data Source=.;Integrated Security=SSPI;Initial Catalog=OPC_DATA";
+                string _connectionString = "Data Source=.\\SQLEXPRESS;Integrated Security=SSPI;Initial Catalog=SKL_SCADA";
                 string ConStringEncrypt = ConfigurationManager.AppSettings["ConStringEncrypt"];
                 if (ConStringEncrypt == "true")
                 {

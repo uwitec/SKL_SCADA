@@ -271,12 +271,12 @@
                                     Height="30px" Theme="Glass">
                                     <ClientSideEvents Click="function(s, e) {
                                     Grid3.PerformCallback(
-                                    S1.GetValue().toString()+'|'+
-                                    S2.GetValue().toString()+'|'+
-                                    S3.GetValue().toString()+'|'+
-                                    S4.GetValue().toString()+'|'+
-                                    S5.GetValue().toString()+'|'+
-                                    S6.GetValue().toString());
+                                    S1.GetText()+'|'+
+                                    S2.GetText()+'|'+
+                                    S3.GetText()+'|'+
+                                    S4.GetText()+'|'+
+                                    S5.GetText()+'|'+
+                                    S6.GetText()+'|'+'add');
                                     }"/>
                                 </dx:ASPxButton>
                             </div>
@@ -286,7 +286,10 @@
                         <div class="conBlock">
                             <div class="conBlockL"></div>
                             <div class="conBlockR">
-                                <dx:ASPxButton ID="ASPxButton6" runat="server" Text="录入数据库" Width="100%" Height="30px" Theme="Glass">
+                                <dx:ASPxButton ID="ASPxButton6" AutoPostBack="False" runat="server" Text="录入数据库" Width="100%" 
+                                    Height="30px" Theme="Glass">
+                                    <ClientSideEvents Click="function(s, e) {
+                                    Grid3.PerformCallback(''+'|'+''+'|'+''+'|'+''+'|'+''+'|'+''+'|'+'drop');}"/>
                                 </dx:ASPxButton>
                             </div>
                         </div>
@@ -294,7 +297,9 @@
                     <div class="infoCheck">
                         <dx:ASPxGridView ID="ASPxGridView3" ClientInstanceName="Grid3" runat="server" AutoGenerateColumns="False" 
                             EnableTheming="True" Theme="Glass" Width="100%" Font-Size="14px" 
-                            oncustomcallback="ASPxGridView3_CustomCallback" KeyFieldName="dataEditing;">
+                            oncustomcallback="ASPxGridView3_CustomCallback"
+                            KeyFieldName="SupID" onrowdeleting="ASPxGridView3_RowDeleting" 
+                            onrowupdating="ASPxGridView3_RowUpdating" >
                             <Columns>
                                 <dx:GridViewDataTextColumn Caption="供应商名称" FieldName="SupplierName" VisibleIndex="0">
                                 </dx:GridViewDataTextColumn>
@@ -314,11 +319,12 @@
                                     </EditButton>
                                     <DeleteButton Text="删除" Visible="True">
                                     </DeleteButton>
-                                    <ClearFilterButton Visible="True">
-                                    </ClearFilterButton>
                                 </dx:GridViewCommandColumn>
+                                <dx:GridViewDataTextColumn FieldName="SupID" Visible="False" VisibleIndex="7">
+                                </dx:GridViewDataTextColumn>
                             </Columns>
-                            <SettingsBehavior ConfirmDelete="True" />
+                            <SettingsBehavior ConfirmDelete="False" AllowFocusedRow="True" 
+                                AllowSelectByRowClick="True" AllowSelectSingleRowOnly="True" />
                             <SettingsEditing Mode="Inline" />
                         </dx:ASPxGridView>
                     </div>
