@@ -1,5 +1,4 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/HeadFoot.Master" AutoEventWireup="true" CodeBehind="BatchFill.aspx.cs" Inherits="SKL_SCADA.BatchFill" %>
-
 <%@ Register Assembly="DevExpress.Web.v13.1, Version=13.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
     Namespace="DevExpress.Web.ASPxGridView" TagPrefix="dx" %>
 <%@ Register assembly="DevExpress.Web.v13.1, Version=13.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxEditors" tagprefix="dx" %>
@@ -37,134 +36,6 @@
 				<div class="clear"> </div>
 			</div>
             <div class="col-md-9 team-grid text-center">
-                <div class="bigBlock">									 
-				    <h2>产品工艺录入</h2>
-				    <p class="text-left">在产品工艺信息录入过程中应该注意：
-                    1.首先创建工艺名称；2.选择工艺名称，插入所使用的原材料。
-                    在预览确认无误以后，方可提交。否则无法录入数据库中。</p>
-                    <div class="infoInput">
-                        <div class="conBlock">
-                            <div class="conBlockL"><h3 class="text-left">工艺名称：</h3></div>
-                            <div class="conBlockR">
-                                <dx:ASPxTextBox ID="ASPxTextBox1" runat="server" Width="100%" Height="30px" Theme="Glass">
-                                </dx:ASPxTextBox>
-                            </div>
-                        </div>
-                        <div class="conBlock">
-                            <div class="conBlockL"></div>
-                            <div class="conBlockR">
-                                <dx:ASPxButton ID="ASPxButton7" runat="server" Text="工艺录入" Width="100%" Height="30px" Theme="Glass">
-                                </dx:ASPxButton>
-                            </div>
-                        </div>
-                         <div class="conBlock">
-                            <div class="conBlockL"></div>
-                            <div class="conBlockR">
-                                <dx:ASPxButton ID="ASPxButton8" runat="server" Text="录入数据库" Width="100%" Height="30px" Theme="Glass">
-                                </dx:ASPxButton>
-                            </div>
-                        </div>
-
-                        <div class="conBlock">
-                            <div class="conBlockL"><h3 class="text-left">原材料：</h3></div>
-                            <div class="conBlockR">
-                                <dx:ASPxComboBox ID="ASPxComboBox1" runat="server" ValueType="System.String"
-                                Width="100%" Height="30px" Theme="Glass">
-                                </dx:ASPxComboBox>
-                            </div>
-                        </div>
-                        <div class="conBlock">
-                            <div class="conBlockL"></div>
-                            <div class="conBlockR">
-                                <dx:ASPxButton ID="ASPxButton1" runat="server" Text="关联原材料" Width="100%" Height="30px" Theme="Glass">
-                                </dx:ASPxButton>
-                            </div>
-                        </div>
-                        <div class="conBlock">
-                            <div class="conBlockL"></div>
-                            <div class="conBlockR">
-                                <dx:ASPxButton ID="ASPxButton2" runat="server" Text="录入数据库" Width="100%" Height="30px" Theme="Glass">
-                                </dx:ASPxButton>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="infoCheck">
-                        <dx:ASPxGridView ID="ASPxGridView1" runat="server" AutoGenerateColumns="False" 
-                            EnableTheming="True" Theme="Glass" Width="100%" Font-Size="14px">
-                            <Columns>
-                                <dx:GridViewDataTextColumn Caption="工艺名称" FieldName="PPID" VisibleIndex="0">
-                                </dx:GridViewDataTextColumn>
-                                <dx:GridViewDataTextColumn Caption="原材料名称" FieldName="RID" VisibleIndex="1">
-                                </dx:GridViewDataTextColumn>
-                            </Columns>
-                        </dx:ASPxGridView>
-                    </div>
-                </div>
-                <div class="bigBlock">
-                    <h2>产品信息录入</h2>
-				    <p class="text-left">在产品信息录入过程中应该注意：产品名称和产品工艺这两项禁止为“空”，
-                    否则无法提交，在预览确认无误以后，方可提交。否则无法录入数据库中。</p>
-                    <div class="infoInput">
-                        <div class="conBlock">
-                            <div class="conBlockL"><h3 class="text-left">产品名称：</h3></div>
-                            <div class="conBlockR">
-                                <dx:ASPxTextBox ID="ASPxTextBox4" runat="server" Width="100%" Height="30px" Theme="Glass">
-                                </dx:ASPxTextBox>
-                            </div>
-                        </div>
-                        <div class="conBlock">
-                            <div class="conBlockL"><h3 class="text-left">产品规格：</h3></div>
-                            <div class="conBlockR">
-                                <dx:ASPxTextBox ID="ASPxTextBox7" runat="server" Width="100%" Height="30px" Theme="Glass">
-                                </dx:ASPxTextBox>
-                            </div>
-                        </div>
-                        <div class="conBlock">
-                            <div class="conBlockL"><h3 class="text-left">产品工艺：</h3></div>
-                            <div class="conBlockR">
-                                <dx:ASPxComboBox ID="ASPxComboBox2" runat="server" ValueType="System.String"
-                                Width="100%" Height="30px" Theme="Glass">
-                                </dx:ASPxComboBox>
-                            </div>
-                        </div>
-                        <div class="conBlock">
-                            <div class="conBlockL"><h3 class="text-left">备注：</h3></div>
-                            <div class="conBlockR">
-                                <dx:ASPxTextBox ID="ASPxTextBox6" runat="server" Width="100%" Height="30px" Theme="Glass">
-                                </dx:ASPxTextBox>
-                            </div>
-                        </div>
-                        <div class="conBlock">
-                            <div class="conBlockL"></div>
-                            <div class="conBlockR">
-                                <dx:ASPxButton ID="ASPxButton3" runat="server" Text="插入产品记录" Width="100%" Height="30px" Theme="Glass">
-                                </dx:ASPxButton>
-                            </div>
-                        </div>
-                        <div class="conBlock">
-                            <div class="conBlockL"></div>
-                            <div class="conBlockR">
-                                <dx:ASPxButton ID="ASPxButton4" runat="server" Text="录入数据库" Width="100%" Height="30px" Theme="Glass">
-                                </dx:ASPxButton>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="infoCheck">
-                        <dx:ASPxGridView ID="ASPxGridView2" runat="server" AutoGenerateColumns="False" 
-                            EnableTheming="True" Theme="Glass" Width="100%" Font-Size="14px">
-                            <Columns>
-                                <dx:GridViewDataTextColumn Caption="产品名称" FieldName="PName" VisibleIndex="0">
-                                </dx:GridViewDataTextColumn>
-                                <dx:GridViewDataTextColumn Caption="产品规格" FieldName="PSpecification" VisibleIndex="1">
-                                </dx:GridViewDataTextColumn>
-                                <dx:GridViewDataTextColumn Caption="产品工艺" FieldName="PPID" VisibleIndex="2">
-                                </dx:GridViewDataTextColumn>
-                                <dx:GridViewDataTextColumn Caption="产品备注" FieldName="PRemarks" VisibleIndex="3">
-                                </dx:GridViewDataTextColumn>
-                            </Columns>
-                        </dx:ASPxGridView>
-                    </div>
-                </div>
                 <div class="bigBlock">
                     <h2>灌装批次信息录入</h2>
 				    <p class="text-left">在灌装信息录入过程中应该注意：产品名称、批次数量、批次开始时间这三项禁止为“空”，
@@ -247,6 +118,193 @@
                                 </dx:GridViewDataTextColumn>
                             </Columns>
                         </dx:ASPxGridView>
+                    </div>
+                </div>
+                <div class="bigBlock">
+                    <h2>产品信息录入</h2>
+				    <p class="text-left">在产品信息录入过程中应该注意：产品名称和产品工艺这两项禁止为“空”，
+                    否则无法提交，在预览确认无误以后，方可提交。否则无法录入数据库中。</p>
+                    <div class="infoInput">
+                        <div class="conBlock">
+                            <div class="conBlockL"><h3 class="text-left">产品名称：</h3></div>
+                            <div class="conBlockR">
+                                <dx:ASPxTextBox ID="ASPxTextBox4" runat="server" Width="100%" Height="30px" Theme="Glass">
+                                </dx:ASPxTextBox>
+                            </div>
+                        </div>
+                        <div class="conBlock">
+                            <div class="conBlockL"><h3 class="text-left">产品规格：</h3></div>
+                            <div class="conBlockR">
+                                <dx:ASPxTextBox ID="ASPxTextBox7" runat="server" Width="100%" Height="30px" Theme="Glass">
+                                </dx:ASPxTextBox>
+                            </div>
+                        </div>
+                        <div class="conBlock">
+                            <div class="conBlockL"><h3 class="text-left">产品工艺：</h3></div>
+                            <div class="conBlockR">
+                                <dx:ASPxComboBox ID="ASPxComboBox2" runat="server" ValueType="System.String"
+                                Width="100%" Height="30px" Theme="Glass">
+                                </dx:ASPxComboBox>
+                            </div>
+                        </div>
+                        <div class="conBlock">
+                            <div class="conBlockL"><h3 class="text-left">备注：</h3></div>
+                            <div class="conBlockR">
+                                <dx:ASPxTextBox ID="ASPxTextBox6" runat="server" Width="100%" Height="30px" Theme="Glass">
+                                </dx:ASPxTextBox>
+                            </div>
+                        </div>
+                        <div class="conBlock">
+                            <div class="conBlockL"></div>
+                            <div class="conBlockR">
+                                <dx:ASPxButton ID="ASPxButton3" runat="server" Text="插入产品记录" Width="100%" Height="30px" Theme="Glass">
+                                </dx:ASPxButton>
+                            </div>
+                        </div>
+                        <div class="conBlock">
+                            <div class="conBlockL"></div>
+                            <div class="conBlockR">
+                                <dx:ASPxButton ID="ASPxButton4" runat="server" Text="录入数据库" Width="100%" Height="30px" Theme="Glass">
+                                </dx:ASPxButton>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="infoCheck">
+                        <dx:ASPxGridView ID="ASPxGridView2" runat="server" AutoGenerateColumns="False" 
+                            EnableTheming="True" Theme="Glass" Width="100%" Font-Size="14px">
+                            <Columns>
+                                <dx:GridViewDataTextColumn Caption="产品名称" FieldName="PName" VisibleIndex="0">
+                                </dx:GridViewDataTextColumn>
+                                <dx:GridViewDataTextColumn Caption="产品规格" FieldName="PSpecification" VisibleIndex="1">
+                                </dx:GridViewDataTextColumn>
+                                <dx:GridViewDataTextColumn Caption="产品工艺" FieldName="PPID" VisibleIndex="2">
+                                </dx:GridViewDataTextColumn>
+                                <dx:GridViewDataTextColumn Caption="产品备注" FieldName="PRemarks" VisibleIndex="3">
+                                </dx:GridViewDataTextColumn>
+                            </Columns>
+                        </dx:ASPxGridView>
+                    </div>
+                </div>
+                <div class="bigBlock">									 
+				    <h2>产品工艺关联原材料</h2>
+				    <p class="text-left">在产品工艺信息录入过程中应该注意：
+                    1.选择工艺名称，插入所使用的原材料。
+                    在预览确认无误以后，方可提交。否则无法录入数据库中。</p>
+                    <div class="infoInput">
+                        <div class="conBlock">
+                            <div class="conBlockL"><h3 class="text-left">选择工艺：</h3></div>
+                            <div class="conBlockR">
+                                <dx:ASPxComboBox ID="ASPxComboBox5" runat="server" ValueType="System.String"
+                                Width="100%" Height="30px" Theme="Glass">
+                                </dx:ASPxComboBox>
+                            </div>
+                        </div>
+                        <div class="conBlock">
+                            <div class="conBlockL"><h3 class="text-left">选择原材料：</h3></div>
+                            <div class="conBlockR">
+                                <dx:ASPxComboBox ID="ASPxComboBox1" runat="server" ValueType="System.String"
+                                Width="100%" Height="30px" Theme="Glass">
+                                </dx:ASPxComboBox>
+                            </div>
+                        </div>
+                        <div class="conBlock">
+                        </div>
+                        <div class="conBlock">
+                            <div class="conBlockL"></div>
+                            <div class="conBlockR">
+                                <dx:ASPxButton ID="ASPxButton1" runat="server" Text="创建关联关系" Width="100%" Height="30px" Theme="Glass">
+                                </dx:ASPxButton>
+                            </div>
+                        </div>
+                        <div class="conBlock">
+                        </div>
+                        <div class="conBlock">
+                            <div class="conBlockL"></div>
+                            <div class="conBlockR">
+                                <dx:ASPxButton ID="ASPxButton2" runat="server" Text="录入数据库" Width="100%" Height="30px" Theme="Glass">
+                                </dx:ASPxButton>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="infoCheck">
+                        <dx:ASPxGridView ID="ASPxGridView1" runat="server" AutoGenerateColumns="False" 
+                            EnableTheming="True" Theme="Glass" Width="100%" Font-Size="14px">
+                            <Columns>
+                                <dx:GridViewDataTextColumn Caption="工艺名称" FieldName="PPID" VisibleIndex="0">
+                                </dx:GridViewDataTextColumn>
+                                <dx:GridViewDataTextColumn Caption="原材料名称" FieldName="RID" VisibleIndex="1">
+                                </dx:GridViewDataTextColumn>
+                            </Columns>
+                        </dx:ASPxGridView>
+                    </div>
+                </div>
+                <div class="bigBlock">
+                    <h2>创建产品工艺</h2>
+                    <div class="infoCheck">
+                        <div class="conBlock">
+                            <div class="conBlockL"><h3 class="text-left">工艺名称：</h3></div>
+                            <div class="conBlockR">
+                                <dx:ASPxTextBox ID="ASPxTextBox1" ClientInstanceName="P0" runat="server" Width="100%" Height="30px" Theme="Glass">
+                                </dx:ASPxTextBox>
+                            </div>
+                        </div>
+                        <div class="conBlock">
+                            <div class="conBlockL"><h3 class="text-left">工艺备注：</h3></div>
+                            <div class="conBlockR">
+                                <dx:ASPxTextBox ID="ASPxTextBox5" ClientInstanceName="P1" runat="server" Width="100%" Height="30px" Theme="Glass">
+                                </dx:ASPxTextBox>
+                            </div>
+                        </div>
+                        <div class="conBlock"></div>
+                        <div class="conBlock">
+                            <div class="conBlockL">
+                            </div>
+                            <div class="conBlockR">
+                                <dx:ASPxButton ID="ASPxButton7" AutoPostBack="False" runat="server" Text="创建工艺" Width="100%" Height="30px" Theme="Glass">
+                                    <ClientSideEvents Click="function(s, e) {
+                                    Grid4.PerformCallback(
+                                    P0.GetText()+'|'+P0.GetText()+'|add'
+                                    );}"></ClientSideEvents>
+                                </dx:ASPxButton>
+                            </div>
+                        </div>
+                        <div class="conBlock"></div>
+                        <div class="conBlock">
+                            <div class="conBlockL"></div>
+                            <div class="conBlockR">
+                                <dx:ASPxButton ID="ASPxButton8" AutoPostBack="False" runat="server" Text="录入数据库" Width="100%" Height="30px" Theme="Glass">
+                                    <ClientSideEvents Click="function(s, e) {
+                                    Grid4.PerformCallback(
+                                    ''+'|'+''+'|drop'
+                                    );}"></ClientSideEvents>
+                                </dx:ASPxButton>
+                            </div>
+                        </div>
+                        <div class="infoCheck">
+                        <dx:ASPxGridView ID="ASPxGridView4" ClientInstanceName="Grid4" runat="server" AutoGenerateColumns="False" 
+                            EnableTheming="True" Theme="Glass" Width="100%" Font-Size="14px" 
+                            oncustomcallback="ASPxGridView4_CustomCallback" onrowdeleting="ASPxGridView4_RowDeleting" 
+                            onrowupdating="ASPxGridView4_RowUpdating" KeyFieldName="PPID" >
+                            <Columns>
+                                <dx:GridViewDataTextColumn Caption="工艺名称" FieldName="ProdProcess" VisibleIndex="0">
+                                </dx:GridViewDataTextColumn>
+                                <dx:GridViewDataTextColumn Caption="工艺备注" FieldName="PPRemarks" VisibleIndex="1">
+                                </dx:GridViewDataTextColumn>
+                                <dx:GridViewCommandColumn Caption="操作" ShowSelectCheckbox="True" 
+                                    VisibleIndex="5">
+                                    <EditButton Text="编辑" Visible="True">
+                                    </EditButton>
+                                    <DeleteButton Text="删除" Visible="True">
+                                    </DeleteButton>
+                                </dx:GridViewCommandColumn>
+                                <dx:GridViewDataTextColumn FieldName="PPID" Visible="False" VisibleIndex="7">
+                                </dx:GridViewDataTextColumn>
+                            </Columns>
+                            <SettingsBehavior ConfirmDelete="False" AllowFocusedRow="True" 
+                                AllowSelectByRowClick="True" AllowSelectSingleRowOnly="True" />
+                            <SettingsEditing Mode="Inline" />
+                        </dx:ASPxGridView>
+                    </div>
                     </div>
                 </div>
 			</div>

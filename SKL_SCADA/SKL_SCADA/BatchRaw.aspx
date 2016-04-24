@@ -47,60 +47,65 @@
                         <div class="conBlock">
                             <div class="conBlockL"><h3 class="text-left">批次号：</h3></div>
                             <div class="conBlockR">
-                                <dx:ASPxTextBox ID="ASPxTextBox1" runat="server" Width="100%" Height="30px" Theme="Glass">
+                                <dx:ASPxTextBox ID="ASPxTextBox1" ClientInstanceName="B1" runat="server" Width="100%" Height="30px" Theme="Glass">
                                 </dx:ASPxTextBox>
                             </div>
                         </div>
                         <div class="conBlock">
                             <div class="conBlockL"><h3 class="text-left">原材料：</h3></div>
                             <div class="conBlockR">
-                                <dx:ASPxComboBox ID="ASPxComboBox1" ClientInstanceName="rawName" runat="server"
-                                Width="100%" Height="30px" Theme="Glass" DataSourceID="SqlDataSource1" >
+                                <dx:ASPxComboBox ID="ASPxComboBox1" ClientInstanceName="B2" runat="server"
+                                Width="100%" Height="30px" Theme="Glass" DataSourceID="SqlDataSource1" 
+                                TextFormatString="{0}|{1}|{3}" >
                                     <Columns>
-                                        <dx:ListBoxColumn FieldName="RID" />
-                                        <dx:ListBoxColumn FieldName="RName" />
-                                        <dx:ListBoxColumn FieldName="RSpecification" />
+                                        <dx:ListBoxColumn FieldName="RID" Caption="原材料编号" />
+                                        <dx:ListBoxColumn FieldName="RName" Caption="原材料名称" />
+                                        <dx:ListBoxColumn FieldName="RType" Caption="具体名称" />
+                                        <dx:ListBoxColumn FieldName="RSpecification" Caption="具体名称" />
+                                        <dx:ListBoxColumn FieldName="Unit" Caption="计量单位" />
                                     </Columns>
                                 </dx:ASPxComboBox>
                                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
                                     ConnectionString="<%$ ConnectionStrings:SKL_SCADAConnectionString %>" 
-                                    SelectCommand="SELECT [RID],[RName],[RSpecification] FROM [RawMaterial]"></asp:SqlDataSource>
-                            </div>
-                        </div>
-                        <div class="conBlock">
-                            <div class="conBlockL"><h3 class="text-left">规格：</h3></div>
-                            <div class="conBlockR">
-                                <dx:ASPxComboBox ID="ASPxComboBox2" runat="server" ValueType="System.String"
-                                Width="100%" Height="30px" Theme="Glass">
-                                </dx:ASPxComboBox>
+                                    SelectCommand="SELECT [RID],[RName],[RType],[RSpecification],[Unit] FROM [RawMaterial]"></asp:SqlDataSource>
                             </div>
                         </div>
                         <div class="conBlock">
                             <div class="conBlockL"><h3 class="text-left">数量：</h3></div>
                             <div class="conBlockR">
-                                <dx:ASPxTextBox ID="ASPxTextBox3" runat="server" Width="100%" Height="30px" Theme="Glass">
+                                <dx:ASPxTextBox ID="ASPxTextBox3" ClientInstanceName="B3" runat="server" Width="100%" Height="30px" Theme="Glass">
                                 </dx:ASPxTextBox>
                             </div>
                         </div>
                         <div class="conBlock">
                             <div class="conBlockL"><h3 class="text-left">入库时间：</h3></div>
                             <div class="conBlockR">
-                                <dx:ASPxComboBox ID="ASPxComboBox3" runat="server" ValueType="System.String"
+                                <dx:ASPxDateEdit ID="ASPxDateEdit1" runat="server" ClientInstanceName="B4"
                                 Width="100%" Height="30px" Theme="Glass">
-                                </dx:ASPxComboBox>
+                                </dx:ASPxDateEdit>
                             </div>
                         </div>
                         <div class="conBlock">
+                        </div>                               
+                        <div class="conBlock">
                             <div class="conBlockL"><h3 class="text-left">备注：</h3></div>
                             <div class="conBlockR">
-                                <dx:ASPxTextBox ID="ASPxTextBox2" runat="server" Width="100%" Height="30px" Theme="Glass">
+                                <dx:ASPxTextBox ID="ASPxTextBox2" ClientInstanceName="B5" runat="server" Width="100%" Height="30px" Theme="Glass">
                                 </dx:ASPxTextBox>
                             </div>
                         </div>
                         <div class="conBlock">
                             <div class="conBlockL"></div>
                             <div class="conBlockR">
-                                <dx:ASPxButton ID="ASPxButton1" runat="server" Text="插入记录" Width="100%" Height="30px" Theme="Glass">
+                                <dx:ASPxButton ID="ASPxButton1" AutoPostBack="False" runat="server" Text="插入记录" Width="100%" Height="30px" Theme="Glass">
+                                    <ClientSideEvents Click="function(s, e) {
+                                    Grid1.PerformCallback(
+                                    B1.GetText()+'|'+
+                                    B2.GetText()+'|'+
+                                    B3.GetText()+'|'+
+                                    B4.GetText()+'|'+
+                                    B5.GetText()+'|'+'add');
+                                    }"/>
                                 </dx:ASPxButton>
                             </div>
                         </div>
@@ -108,14 +113,19 @@
                         <div class="conBlock">
                             <div class="conBlockL"></div>
                             <div class="conBlockR">
-                                <dx:ASPxButton ID="ASPxButton2" runat="server" Text="录入数据库" Width="100%" Height="30px" Theme="Glass">
+                                <dx:ASPxButton ID="ASPxButton2" AutoPostBack="False" runat="server" Text="录入数据库" Width="100%" Height="30px" Theme="Glass">
+                                    <ClientSideEvents Click="function(s, e) {
+                                    Grid1.PerformCallback(''+'|'+''+'|'+''+'|'+''+'|'+''+'|'+''+'|'+''+'|'+'drop');}"/>
                                 </dx:ASPxButton>
                             </div>
                         </div>
                     </div>
                     <div class="infoCheck">
-                        <dx:ASPxGridView ID="ASPxGridView1" runat="server" AutoGenerateColumns="False" 
-                            EnableTheming="True" Theme="Glass" Width="100%" Font-Size="14px">
+                        <dx:ASPxGridView ID="ASPxGridView1" ClientInstanceName="Grid1" runat="server" AutoGenerateColumns="False" 
+                            EnableTheming="True" Theme="Glass" Width="100%" Font-Size="14px" 
+                            oncustomcallback="ASPxGridView1_CustomCallback"
+                            KeyFieldName="BRID" onrowdeleting="ASPxGridView1_RowDeleting" 
+                            onrowupdating="ASPxGridView1_RowUpdating" >
                             <Columns>
                                 <dx:GridViewDataTextColumn Caption="批次号" FieldName="BRNumber" VisibleIndex="0">
                                 </dx:GridViewDataTextColumn>
@@ -129,7 +139,19 @@
                                 </dx:GridViewDataTextColumn>
                                 <dx:GridViewDataTextColumn Caption="备注" FieldName="BRRemarks" VisibleIndex="5">
                                 </dx:GridViewDataTextColumn>
+                                <dx:GridViewCommandColumn Caption="操作" ShowSelectCheckbox="True" 
+                                    VisibleIndex="6">
+                                    <EditButton Text="编辑" Visible="True">
+                                    </EditButton>
+                                    <DeleteButton Text="删除" Visible="True">
+                                    </DeleteButton>
+                                </dx:GridViewCommandColumn>
+                                <dx:GridViewDataTextColumn FieldName="BRID" Visible="False" VisibleIndex="7">
+                                </dx:GridViewDataTextColumn>
                             </Columns>
+                            <SettingsBehavior ConfirmDelete="False" AllowFocusedRow="True" 
+                                AllowSelectByRowClick="True" AllowSelectSingleRowOnly="True" />
+                            <SettingsEditing Mode="Inline" />
                         </dx:ASPxGridView>
                     </div>
                 </div>
@@ -141,50 +163,66 @@
                         <div class="conBlock">
                             <div class="conBlockL"><h3 class="text-left">原材料：</h3></div>
                             <div class="conBlockR">
-                                <dx:ASPxTextBox ID="ASPxTextBox4" runat="server" Width="100%" Height="30px" Theme="Glass">
+                                <dx:ASPxTextBox ID="ASPxTextBox4" ClientInstanceName="R1" runat="server" Width="100%" Height="30px" Theme="Glass">
                                 </dx:ASPxTextBox>
                             </div>
                         </div>
                         <div class="conBlock">
                             <div class="conBlockL"><h3 class="text-left">具体名称：</h3></div>
                             <div class="conBlockR">
-                                <dx:ASPxTextBox ID="ASPxTextBox7" runat="server" Width="100%" Height="30px" Theme="Glass">
+                                <dx:ASPxTextBox ID="ASPxTextBox7" ClientInstanceName="R2" runat="server" Width="100%" Height="30px" Theme="Glass">
                                 </dx:ASPxTextBox>
                             </div>
                         </div>
                         <div class="conBlock">
                             <div class="conBlockL"><h3 class="text-left">规格：</h3></div>
                             <div class="conBlockR">
-                                <dx:ASPxTextBox ID="ASPxTextBox8" runat="server" Width="100%" Height="30px" Theme="Glass">
+                                <dx:ASPxTextBox ID="ASPxTextBox8" ClientInstanceName="R3" runat="server" Width="100%" Height="30px" Theme="Glass">
                                 </dx:ASPxTextBox>
                             </div>
                         </div>
                         <div class="conBlock">
                             <div class="conBlockL"><h3 class="text-left">计量单位：</h3></div>
                             <div class="conBlockR">
-                                <dx:ASPxTextBox ID="ASPxTextBox5" runat="server" Width="100%" Height="30px" Theme="Glass">
+                                <dx:ASPxTextBox ID="ASPxTextBox5" ClientInstanceName="R4" runat="server" Width="100%" Height="30px" Theme="Glass">
                                 </dx:ASPxTextBox>
                             </div>
                         </div>
                         <div class="conBlock">
                             <div class="conBlockL"><h3 class="text-left">供应商：</h3></div>
                             <div class="conBlockR">
-                                <dx:ASPxComboBox ID="ASPxComboBox6" runat="server" ValueType="System.String"
-                                Width="100%" Height="30px" Theme="Glass">
+                                <dx:ASPxComboBox ID="ASPxComboBox6" ClientInstanceName="R5" runat="server"
+                                Width="100%" Height="30px" Theme="Glass" DataSourceID="SqlDataSource2" TextFormatString="{0}|{1}" >
+                                    <Columns>
+                                        <dx:ListBoxColumn FieldName="SID" Caption="供应商编号"/>                                       
+                                        <dx:ListBoxColumn FieldName="SupplierName" Caption="供应商名称" />
+                                    </Columns>
                                 </dx:ASPxComboBox>
+                                <asp:SqlDataSource ID="SqlDataSource2" runat="server" 
+                                    ConnectionString="<%$ ConnectionStrings:SKL_SCADAConnectionString %>" 
+                                    SelectCommand="SELECT [SID],[SupplierName] FROM [Supplier]"></asp:SqlDataSource>
                             </div>
                         </div>
                         <div class="conBlock">
                             <div class="conBlockL"><h3 class="text-left">备注：</h3></div>
                             <div class="conBlockR">
-                                <dx:ASPxTextBox ID="ASPxTextBox6" runat="server" Width="100%" Height="30px" Theme="Glass">
+                                <dx:ASPxTextBox ID="ASPxTextBox6" ClientInstanceName="R6" runat="server" Width="100%" Height="30px" Theme="Glass">
                                 </dx:ASPxTextBox>
                             </div>
                         </div>
                         <div class="conBlock">
                             <div class="conBlockL"></div>
                             <div class="conBlockR">
-                                <dx:ASPxButton ID="ASPxButton3" runat="server" Text="插入原材料" Width="100%" Height="30px" Theme="Glass">
+                                <dx:ASPxButton ID="ASPxButton3" AutoPostBack="False" runat="server" Text="插入原材料" Width="100%" Height="30px" Theme="Glass">
+                                    <ClientSideEvents Click="function(s, e) {
+                                    Grid2.PerformCallback(
+                                    R1.GetText()+'|'+
+                                    R2.GetText()+'|'+
+                                    R3.GetText()+'|'+
+                                    R4.GetText()+'|'+
+                                    R5.GetText()+'|'+
+                                    R6.GetText()+'|'+'add');
+                                    }"/>
                                 </dx:ASPxButton>
                             </div>
                         </div>
@@ -192,14 +230,20 @@
                         <div class="conBlock">
                             <div class="conBlockL"></div>
                             <div class="conBlockR">
-                                <dx:ASPxButton ID="ASPxButton4" runat="server" Text="录入数据库" Width="100%" Height="30px" Theme="Glass">
+                                <dx:ASPxButton ID="ASPxButton4" AutoPostBack="False" runat="server" Text="录入数据库" Width="100%" 
+                                    Height="30px" Theme="Glass">
+                                    <ClientSideEvents Click="function(s, e) {
+                                    Grid2.PerformCallback(''+'|'+''+'|'+''+'|'+''+'|'+''+'|'+''+'|'+''+'|'+'drop');}"/>
                                 </dx:ASPxButton>
                             </div>
                         </div>
                     </div>
                     <div class="infoCheck">
-                        <dx:ASPxGridView ID="ASPxGridView2" runat="server" AutoGenerateColumns="False" 
-                            EnableTheming="True" Theme="Glass" Width="100%" Font-Size="14px">
+                        <dx:ASPxGridView ID="ASPxGridView2" ClientInstanceName="Grid2" runat="server" AutoGenerateColumns="False" 
+                            EnableTheming="True" Theme="Glass" Width="100%" Font-Size="14px" 
+                            oncustomcallback="ASPxGridView2_CustomCallback"
+                            KeyFieldName="RawID" onrowdeleting="ASPxGridView2_RowDeleting" 
+                            onrowupdating="ASPxGridView2_RowUpdating" >
                             <Columns>
                                 <dx:GridViewDataTextColumn Caption="原材料名称" FieldName="RName" VisibleIndex="0">
                                 </dx:GridViewDataTextColumn>
@@ -213,7 +257,19 @@
                                 </dx:GridViewDataTextColumn>
                                 <dx:GridViewDataTextColumn Caption="备注" FieldName="RRemarks" VisibleIndex="5">
                                 </dx:GridViewDataTextColumn>
+                                <dx:GridViewCommandColumn Caption="操作" ShowSelectCheckbox="True" 
+                                    VisibleIndex="6">
+                                    <EditButton Text="编辑" Visible="True">
+                                    </EditButton>
+                                    <DeleteButton Text="删除" Visible="True">
+                                    </DeleteButton>
+                                </dx:GridViewCommandColumn>
+                                <dx:GridViewDataTextColumn FieldName="RawID" Visible="False" VisibleIndex="7">
+                                </dx:GridViewDataTextColumn>
                             </Columns>
+                            <SettingsBehavior ConfirmDelete="False" AllowFocusedRow="True" 
+                                AllowSelectByRowClick="True" AllowSelectSingleRowOnly="True" />
+                            <SettingsEditing Mode="Inline" />
                         </dx:ASPxGridView>
                     </div>
                 </div>
@@ -267,7 +323,7 @@
                         <div class="conBlock">
                             <div class="conBlockL"></div>
                             <div class="conBlockR">
-                                <dx:ASPxButton ID="ASPxButton5" AutoPostBack="False"  runat="server" Text="录入供应商" Width="100%" 
+                                <dx:ASPxButton ID="ASPxButton5" AutoPostBack="False" runat="server" Text="录入供应商" Width="100%" 
                                     Height="30px" Theme="Glass">
                                     <ClientSideEvents Click="function(s, e) {
                                     Grid3.PerformCallback(

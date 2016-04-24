@@ -49,15 +49,6 @@ namespace SKL_SCADA {
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
         
         /// <summary>
-        /// ASPxComboBox2 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxEditors.ASPxComboBox ASPxComboBox2;
-        
-        /// <summary>
         /// ASPxTextBox3 控件。
         /// </summary>
         /// <remarks>
@@ -67,13 +58,13 @@ namespace SKL_SCADA {
         protected global::DevExpress.Web.ASPxEditors.ASPxTextBox ASPxTextBox3;
         
         /// <summary>
-        /// ASPxComboBox3 控件。
+        /// ASPxDateEdit1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::DevExpress.Web.ASPxEditors.ASPxComboBox ASPxComboBox3;
+        protected global::DevExpress.Web.ASPxEditors.ASPxDateEdit ASPxDateEdit1;
         
         /// <summary>
         /// ASPxTextBox2 控件。
@@ -155,6 +146,15 @@ namespace SKL_SCADA {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::DevExpress.Web.ASPxEditors.ASPxComboBox ASPxComboBox6;
+        
+        /// <summary>
+        /// SqlDataSource2 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource2;
         
         /// <summary>
         /// ASPxTextBox6 控件。

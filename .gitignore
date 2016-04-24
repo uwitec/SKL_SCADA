@@ -257,3 +257,6 @@ SKL_SCADA/SKL_SCADA/obj/Debug/SKL_SCADA.dll
 *.dll
 SKL_SCADA/SKL_SCADA/bin/SKL_SCADA.dll
 *.pdb
+*.dll
+SKL_SCADA/BLL/bin/Debug/BLL.dll
+*.pdb
