@@ -194,17 +194,38 @@
                         <div class="conBlock">
                             <div class="conBlockL"><h3 class="text-left">选择工艺：</h3></div>
                             <div class="conBlockR">
-                                <dx:ASPxComboBox ID="ASPxComboBox5" runat="server" ValueType="System.String"
-                                Width="100%" Height="30px" Theme="Glass">
+                                <dx:ASPxComboBox ID="ASPxComboBox5" ClientInstanceName="PS1" runat="server"
+                                Width="100%" Height="30px" Theme="Glass" DataSourceID="SqlDataSource1" 
+                                TextFormatString="{0}|{1}|{2}" >
+                                    <Columns>
+                                        <dx:ListBoxColumn FieldName="PPID" Caption="工艺编号" />
+                                        <dx:ListBoxColumn FieldName="ProdProcess" Caption="工艺名称" />
+                                        <dx:ListBoxColumn FieldName="PPRemarks" Caption="备注" />
+                                    </Columns>
                                 </dx:ASPxComboBox>
+                                <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                                    ConnectionString="<%$ ConnectionStrings:SKL_SCADAConnectionString %>" 
+                                    SelectCommand="SELECT [PPID],[ProdProcess],[PPRemarks] FROM [ProductProcess]">
+                                </asp:SqlDataSource>
                             </div>
                         </div>
                         <div class="conBlock">
                             <div class="conBlockL"><h3 class="text-left">选择原材料：</h3></div>
                             <div class="conBlockR">
-                                <dx:ASPxComboBox ID="ASPxComboBox1" runat="server" ValueType="System.String"
-                                Width="100%" Height="30px" Theme="Glass">
+                                <dx:ASPxComboBox ID="ASPxComboBox1" ClientInstanceName="PS2" runat="server"
+                                Width="100%" Height="30px" Theme="Glass" DataSourceID="SqlDataSource1" 
+                                TextFormatString="{0}|{1}|{3}" >
+                                    <Columns>
+                                        <dx:ListBoxColumn FieldName="RID" Caption="原材料编号" />
+                                        <dx:ListBoxColumn FieldName="RName" Caption="原材料名称" />
+                                        <dx:ListBoxColumn FieldName="RType" Caption="具体名称" />
+                                        <dx:ListBoxColumn FieldName="RSpecification" Caption="具体名称" />
+                                        <dx:ListBoxColumn FieldName="Unit" Caption="计量单位" />
+                                    </Columns>
                                 </dx:ASPxComboBox>
+                                <asp:SqlDataSource ID="SqlDataSource2" runat="server" 
+                                    ConnectionString="<%$ ConnectionStrings:SKL_SCADAConnectionString %>" 
+                                    SelectCommand="SELECT [RID],[RName],[RType],[RSpecification],[Unit] FROM [RawMaterial]"></asp:SqlDataSource>
                             </div>
                         </div>
                         <div class="conBlock">
@@ -212,7 +233,12 @@
                         <div class="conBlock">
                             <div class="conBlockL"></div>
                             <div class="conBlockR">
-                                <dx:ASPxButton ID="ASPxButton1" runat="server" Text="创建关联关系" Width="100%" Height="30px" Theme="Glass">
+                                <dx:ASPxButton ID="ASPxButton1" AutoPostBack="False" runat="server" Text="插入关联关系" Width="100%" Height="30px" Theme="Glass">
+                                    <ClientSideEvents Click="function(s, e) {
+                                    Grid3.PerformCallback(
+                                    PS1.GetText()+'|'+
+                                    PS2.GetText()+'|'+'add');
+                                    }"/>
                                 </dx:ASPxButton>
                             </div>
                         </div>
@@ -221,23 +247,44 @@
                         <div class="conBlock">
                             <div class="conBlockL"></div>
                             <div class="conBlockR">
-                                <dx:ASPxButton ID="ASPxButton2" runat="server" Text="录入数据库" Width="100%" Height="30px" Theme="Glass">
+                                <dx:ASPxButton ID="ASPxButton2" AutoPostBack="False" runat="server" Text="录入数据库" Width="100%" Height="30px" Theme="Glass">
+                                    <ClientSideEvents Click="function(s, e) {Grid3.PerformCallback('||||||drop');}"></ClientSideEvents>
                                 </dx:ASPxButton>
                             </div>
                         </div>
                     </div>
                     <div class="infoCheck">
-                        <dx:ASPxGridView ID="ASPxGridView1" runat="server" AutoGenerateColumns="False" 
-                            EnableTheming="True" Theme="Glass" Width="100%" Font-Size="14px">
+                        <dx:ASPxGridView ID="ASPxGridView1" ClientInstanceName="Grid3" runat="server" AutoGenerateColumns="False" 
+                            EnableTheming="True" Theme="Glass" Width="100%" Font-Size="14px" 
+                            oncustomcallback="ASPxGridView3_CustomCallback"
+                            KeyFieldName="PPPID" onrowdeleting="ASPxGridView3_RowDeleting" 
+                            onrowupdating="ASPxGridView3_RowUpdating" >
                             <Columns>
-                                <dx:GridViewDataTextColumn Caption="工艺名称" FieldName="PPID" VisibleIndex="0">
+                                <dx:GridViewDataTextColumn Caption="工艺编号" FieldName="PPID" Visible="False" VisibleIndex="0">
                                 </dx:GridViewDataTextColumn>
-                                <dx:GridViewDataTextColumn Caption="原材料名称" FieldName="RID" VisibleIndex="1">
+                                <dx:GridViewDataTextColumn Caption="工艺名称" FieldName="ProdProcess" VisibleIndex="1">
                                 </dx:GridViewDataTextColumn>
+                                <dx:GridViewDataTextColumn Caption="原材料编号" FieldName="RID" Visible="False" VisibleIndex="2">
+                                </dx:GridViewDataTextColumn>
+                                <dx:GridViewDataTextColumn Caption="原材料名称" FieldName="RName" VisibleIndex="3">
+                                </dx:GridViewDataTextColumn>
+                                <dx:GridViewCommandColumn Caption="操作" ShowSelectCheckbox="True" 
+                                    VisibleIndex="6">
+                                    <EditButton Text="编辑" Visible="True">
+                                    </EditButton>
+                                    <DeleteButton Text="删除" Visible="True">
+                                    </DeleteButton>
+                                </dx:GridViewCommandColumn>
+                                <dx:GridViewDataTextColumn FieldName="PPPID" Visible="False" VisibleIndex="7">
+                                </dx:GridViewDataTextColumn>
+                                <SettingsBehavior ConfirmDelete="False" AllowFocusedRow="True" 
+                                AllowSelectByRowClick="True" AllowSelectSingleRowOnly="True" />
+                            <SettingsEditing Mode="Inline" />
                             </Columns>
                         </dx:ASPxGridView>
                     </div>
                 </div>
+
                 <div class="bigBlock">
                     <h2>创建产品工艺</h2>
                     <div class="infoCheck">
