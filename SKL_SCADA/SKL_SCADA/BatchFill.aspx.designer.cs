@@ -22,13 +22,13 @@ namespace SKL_SCADA {
         protected global::DevExpress.Web.ASPxEditors.ASPxComboBox ASPxComboBox3;
         
         /// <summary>
-        /// ASPxComboBox4 控件。
+        /// SqlDataSource3 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::DevExpress.Web.ASPxEditors.ASPxComboBox ASPxComboBox4;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource3;
         
         /// <summary>
         /// ASPxTextBox9 控件。
@@ -40,22 +40,22 @@ namespace SKL_SCADA {
         protected global::DevExpress.Web.ASPxEditors.ASPxTextBox ASPxTextBox9;
         
         /// <summary>
-        /// ASPxTextBox2 控件。
+        /// ASPxDateEdit1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::DevExpress.Web.ASPxEditors.ASPxTextBox ASPxTextBox2;
+        protected global::DevExpress.Web.ASPxEditors.ASPxDateEdit ASPxDateEdit1;
         
         /// <summary>
-        /// ASPxTextBox3 控件。
+        /// ASPxDateEdit2 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::DevExpress.Web.ASPxEditors.ASPxTextBox ASPxTextBox3;
+        protected global::DevExpress.Web.ASPxEditors.ASPxDateEdit ASPxDateEdit2;
         
         /// <summary>
         /// ASPxTextBox13 控件。
@@ -85,13 +85,13 @@ namespace SKL_SCADA {
         protected global::DevExpress.Web.ASPxEditors.ASPxButton ASPxButton6;
         
         /// <summary>
-        /// ASPxGridView3 控件。
+        /// ASPxGridView1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::DevExpress.Web.ASPxGridView.ASPxGridView ASPxGridView3;
+        protected global::DevExpress.Web.ASPxGridView.ASPxGridView ASPxGridView1;
         
         /// <summary>
         /// ASPxTextBox4 控件。
@@ -119,6 +119,15 @@ namespace SKL_SCADA {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::DevExpress.Web.ASPxEditors.ASPxComboBox ASPxComboBox2;
+        
+        /// <summary>
+        /// SqlDataSource4 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource4;
         
         /// <summary>
         /// ASPxTextBox6 控件。
@@ -211,13 +220,13 @@ namespace SKL_SCADA {
         protected global::DevExpress.Web.ASPxEditors.ASPxButton ASPxButton2;
         
         /// <summary>
-        /// ASPxGridView1 控件。
+        /// ASPxGridView3 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::DevExpress.Web.ASPxGridView.ASPxGridView ASPxGridView1;
+        protected global::DevExpress.Web.ASPxGridView.ASPxGridView ASPxGridView3;
         
         /// <summary>
         /// ASPxTextBox1 控件。

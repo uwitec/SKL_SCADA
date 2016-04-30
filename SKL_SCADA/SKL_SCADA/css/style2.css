@@ -35,6 +35,25 @@
     height: 30px;
     float: left;
 }
+.conBlockR h3 {
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: right;
+}
 .infoCheck {
     margin-top: 25px;
+}
+.h3bold {
+        height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: right;
+}
+.bigconBlock {
+    width: 64%;
+    margin: 8px 0;
+    float: left;
 }

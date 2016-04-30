@@ -31,23 +31,13 @@
 					<p class="sg">该设备的情况为：一切正常。</p>
 					<a class="btn" href="#">更多信息</a>							  
 				</div>
-
-				<div class="col-md-3 service-grid">							 
-						<a href="#"><img src="images/s3.jpg" alt=""/></a>
+                
+                <div class="col-md-3 service-grid">							 
+						<a href="#"><img src="images/s8.jpg" alt=""/></a>
 						<div class="tour-caption">
 						<p>该设备的情况为：一切正常。</p>
 						</div>
-						<h4>灌装机1</h4>
-						<p class="sg">该设备的情况为：一切正常。</p>
-						<a class="btn" href="#">更多信息</a>							  
-				</div>
-
-				<div class="col-md-3 service-grid">							
-						<a href="#"><img src="images/s4.jpg" alt=""/></a>
-						<div class="tour-caption">
-						<p >该设备的情况为：一切正常。</p>
-						</div>
-						<h4>配料机</h4>
+						<h4>报警状态</h4>
 						<p class="sg">该设备的情况为：一切正常。</p>
 						<a class="btn" href="#">更多信息</a>							  
 				</div>
@@ -56,26 +46,17 @@
 			</div> 
 					 
 			<div class="service-grids2">
-				<div class="col-md-3 service-grid">							 
-						<a href="#"><img src="images/s5.jpg" alt=""/></a>
+            
+                <div class="col-md-3 service-grid">							 
+						<a href="#"><img src="images/s3.jpg" alt=""/></a>
 						<div class="tour-caption">
 						<p>该设备的情况为：一切正常。</p>
 						</div>
-						<h4>高温杀菌釜</h4>
+						<h4>灌装机1</h4>
 						<p class="sg">该设备的情况为：一切正常。</p>
 						<a class="btn" href="#">更多信息</a>							  
 				</div>
-
-				<div class="col-md-3 service-grid">							 
-						<a href="#"><img src="images/s6.jpg" alt=""/></a>
-						<div class="tour-caption">
-						<p>该设备的情况为：一切正常。</p>
-						</div>
-						<h4>包装机</h4>
-						<p class="sg">该设备的情况为：一切正常。</p>
-						<a class="btn" href="#">更多信息</a>							 
-				</div>
-
+                
 				<div class="col-md-3 service-grid">							 
 						<a href="#"><img src="images/s7.jpg" alt=""/></a>
 						<div class="tour-caption">
@@ -86,19 +67,75 @@
 						<a class="btn" href="#">更多信息</a>							 
 				</div>
 
-				<div class="col-md-3 service-grid">							 
-						<a href="#"><img src="images/s8.jpg" alt=""/></a>
+                <div class="col-md-3 service-grid">							
+						<a href="#"><img src="images/s4.jpg" alt=""/></a>
 						<div class="tour-caption">
-						<p>该设备的情况为：一切正常。</p>
+						<p >该设备的情况为：一切正常。</p>
 						</div>
-						<h4>报警状态</h4>
+						<h4>机器人1</h4>
+						<p class="sg">该设备的情况为：一切正常。</p>
+						<a class="btn" href="#">更多信息</a>							  
+				</div>
+                
+                <div class="col-md-3 service-grid">							
+						<a href="#"><img src="images/s4.jpg" alt=""/></a>
+						<div class="tour-caption">
+						<p >该设备的情况为：一切正常。</p>
+						</div>
+						<h4>机器人2</h4>
 						<p class="sg">该设备的情况为：一切正常。</p>
 						<a class="btn" href="#">更多信息</a>							  
 				</div>
 
 				<div class="clearfix"></div>
 			</div>
-		    
+
+            <div class="service-grids2">
+                
+                <div class="col-md-3 service-grid">							 
+						<a href="#"><img src="images/s5.jpg" alt=""/></a>
+						<div class="tour-caption">
+						<p>该设备的情况为：一切正常。</p>
+						</div>
+						<h4>高温杀菌釜1</h4>
+						<p class="sg">该设备的情况为：一切正常。</p>
+						<a class="btn" href="#">更多信息</a>							  
+				</div>
+                
+                <div class="col-md-3 service-grid">							 
+						<a href="#"><img src="images/s5.jpg" alt=""/></a>
+						<div class="tour-caption">
+						<p>该设备的情况为：一切正常。</p>
+						</div>
+						<h4>高温杀菌釜2</h4>
+						<p class="sg">该设备的情况为：一切正常。</p>
+						<a class="btn" href="#">更多信息</a>							  
+				</div>
+                
+                <div class="col-md-3 service-grid">							 
+						<a href="#"><img src="images/s5.jpg" alt=""/></a>
+						<div class="tour-caption">
+						<p>该设备的情况为：一切正常。</p>
+						</div>
+						<h4>包装机1</h4>
+						<p class="sg">该设备的情况为：一切正常。</p>
+						<a class="btn" href="#">更多信息</a>							  
+				</div>
+
+				<div class="col-md-3 service-grid">							 
+						<a href="#"><img src="images/s5.jpg" alt=""/></a>
+						<div class="tour-caption">
+						<p>该设备的情况为：一切正常。</p>
+						</div>
+						<h4>包装机2</h4>
+						<p class="sg">该设备的情况为：一切正常。</p>
+						<a class="btn" href="#">更多信息</a>							 
+				</div>
+
+				<div class="clearfix"></div>
+
+            </div>
+
 		</div>
 	</div>
 
