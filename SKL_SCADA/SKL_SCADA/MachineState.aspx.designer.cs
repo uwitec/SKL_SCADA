@@ -13,6 +13,15 @@ namespace SKL_SCADA {
     public partial class MachineState {
         
         /// <summary>
+        /// Label1 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label1;
+        
+        /// <summary>
         /// ASPxImage1 控件。
         /// </summary>
         /// <remarks>
@@ -47,24 +56,6 @@ namespace SKL_SCADA {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::DevExpress.Web.ASPxGauges.ASPxGaugeControl ASPxGaugeControl3;
-        
-        /// <summary>
-        /// ASPxGaugeControl4 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxGauges.ASPxGaugeControl ASPxGaugeControl4;
-        
-        /// <summary>
-        /// ASPxGaugeControl5 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxGauges.ASPxGaugeControl ASPxGaugeControl5;
         
         /// <summary>
         /// ASPxGaugeControl6 控件。

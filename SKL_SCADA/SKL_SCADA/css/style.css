@@ -863,6 +863,12 @@ font-size:0.9em;
 line-height:1.8em;
 margin:1em 0 3em 0;
 }
+.team span{
+color:#5D5D5D;
+font-size:0.9em;
+line-height:1.8em;
+margin:1em 0 3em 0;
+}
 .team-grid h2{
 color: white;
     font-weight: bold;
@@ -936,7 +942,7 @@ margin-bottom:3em;
 }
 .date{
 float:left;
-width:7%;
+width:9%;
 margin-right:1em;
 }
 .date-info{
@@ -1378,6 +1384,10 @@ background-size: 100%;
 overflow: hidden;
 height: 80px;
 }
+.team span {
+overflow: hidden;
+height: 80px;
+}
 .teams img {
 width: 161px;
 height: 156px;
@@ -1625,6 +1635,11 @@ margin: 1.5em 0;
 font-size: 1.5em;
 }
 .team p {
+height: 42px;
+margin: 1em 0 2em 0;
+font-size: 0.8em;
+}
+.team span {
 height: 42px;
 margin: 1em 0 2em 0;
 font-size: 0.8em;
@@ -2013,6 +2028,10 @@ margin: 1em 0;
 font-size: 1.2em;
 }
 .team p {
+margin: 0.5em 0 1em 0;
+font-size: 0.8em;
+}
+.team span {
 margin: 0.5em 0 1em 0;
 font-size: 0.8em;
 }

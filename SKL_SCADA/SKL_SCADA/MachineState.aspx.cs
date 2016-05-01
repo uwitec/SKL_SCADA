@@ -11,9 +11,12 @@ namespace SKL_SCADA
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-//            ASPxGaugeControl1.Value = "red";
-            ASPxLabel1.Text = "1234";
-            ASPxImage1.ImageUrl = "~/images/s2.jpg"
+//            string machineID = Request.QueryString["machineID"];
+            string machineID = "1";
+            BLL.MachineB.GetMachine(machineID);
+
+
+
         }
     }
 }

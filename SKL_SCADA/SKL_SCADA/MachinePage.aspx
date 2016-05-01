@@ -7,134 +7,54 @@
 		<div class="container">	
 			<h3>设备监控</h3>
 			<p class="ser">实时生产车间状态监控：
-                        1.车间环境信息监控（车间温度、湿度、在制品数量）;
-                        2.车间产量监控（日生产量监控、实时出包量）;
-                        3.车间原材料消耗监控（调匀罐储量监测、调匀罐温度、压力检测）;
-                        4.报警信息监控</p>
+                        1.灌装设备监控;
+                        2.机器人监控;
+                        3.高温杀菌釜监控;
+                        4.包装机监控</p>
 			<div class="service-grids">
-			    <div class="col-md-3 service-grid">						
-					<a href="#"><img src="images/s1.jpg" alt=""/></a>
-					<div class="tour-caption">
-					    <p>该设备的情况为：一切正常。</p>
-					</div>
-					<h4>车间总体信息</h4>
-					<p class="sg">该设备的情况为：一切正常。</p>
-					<a class="btn" href="#">更多信息</a>
-				</div>
-
-				<div class="col-md-3 service-grid">							 
-					<a href="#"><img src="images/s2.jpg" alt=""/></a>
-					<div class="tour-caption">
-					    <p>该设备的情况为：一切正常。</p>
-					</div>
-					<h4>机器人总线状态</h4>
-					<p class="sg">该设备的情况为：一切正常。</p>
-					<a class="btn" href="#">更多信息</a>							  
-				</div>
-                
-                <div class="col-md-3 service-grid">							 
-						<a href="#"><img src="images/s8.jpg" alt=""/></a>
-						<div class="tour-caption">
-						<p>该设备的情况为：一切正常。</p>
-						</div>
-						<h4>报警状态</h4>
-						<p class="sg">该设备的情况为：一切正常。</p>
-						<a class="btn" href="#">更多信息</a>							  
-				</div>
-				
-                <div class="clearfix"></div>
-			</div> 
-					 
-			<div class="service-grids2">
             
                 <div class="col-md-3 service-grid">							 
-						<a href="#"><img src="images/s3.jpg" alt=""/></a>
+						<a href="MachineState.aspx?machineID=1"><img src="images/s3.jpg" alt=""/></a>
 						<div class="tour-caption">
 						<p>该设备的情况为：一切正常。</p>
 						</div>
-						<h4>灌装机1</h4>
+						<h4>灌装机</h4>
 						<p class="sg">该设备的情况为：一切正常。</p>
-						<a class="btn" href="#">更多信息</a>							  
+						<a class="btn" href="MachineState.aspx?machineID=1">更多信息</a>							  
 				</div>
                 
-				<div class="col-md-3 service-grid">							 
-						<a href="#"><img src="images/s7.jpg" alt=""/></a>
+                <div class="col-md-3 service-grid">							
+						<a href="MachineState.aspx?machineID=2"><img src="images/s4.jpg" alt=""/></a>
+						<div class="tour-caption">
+						<p >该设备的情况为：一切正常。</p>
+						</div>
+						<h4>机器人</h4>
+						<p class="sg">该设备的情况为：一切正常。</p>
+						<a class="btn" href="MachineState.aspx?machineID=2">更多信息</a>							  
+				</div>
+                
+                <div class="col-md-3 service-grid">							 
+						<a href="MachineState.aspx?machineID=3"><img src="images/s5.jpg" alt=""/></a>
 						<div class="tour-caption">
 						<p>该设备的情况为：一切正常。</p>
 						</div>
-						<h4>灌装机2</h4>
+						<h4>高温杀菌釜</h4>
 						<p class="sg">该设备的情况为：一切正常。</p>
-						<a class="btn" href="#">更多信息</a>							 
+						<a class="btn" href="MachineState.aspx?machineID=3">更多信息</a>							  
 				</div>
 
-                <div class="col-md-3 service-grid">							
-						<a href="#"><img src="images/s4.jpg" alt=""/></a>
+				<div class="col-md-3 service-grid">							 
+						<a href="MachineState.aspx?machineID=4"><img src="images/s5.jpg" alt=""/></a>
 						<div class="tour-caption">
-						<p >该设备的情况为：一切正常。</p>
+						<p>该设备的情况为：一切正常。</p>
 						</div>
-						<h4>机器人1</h4>
+						<h4>包装机</h4>
 						<p class="sg">该设备的情况为：一切正常。</p>
-						<a class="btn" href="#">更多信息</a>							  
-				</div>
-                
-                <div class="col-md-3 service-grid">							
-						<a href="#"><img src="images/s4.jpg" alt=""/></a>
-						<div class="tour-caption">
-						<p >该设备的情况为：一切正常。</p>
-						</div>
-						<h4>机器人2</h4>
-						<p class="sg">该设备的情况为：一切正常。</p>
-						<a class="btn" href="#">更多信息</a>							  
+						<a class="btn" href="MachineState.aspx?machineID=4">更多信息</a>							 
 				</div>
 
 				<div class="clearfix"></div>
 			</div>
-
-            <div class="service-grids2">
-                
-                <div class="col-md-3 service-grid">							 
-						<a href="#"><img src="images/s5.jpg" alt=""/></a>
-						<div class="tour-caption">
-						<p>该设备的情况为：一切正常。</p>
-						</div>
-						<h4>高温杀菌釜1</h4>
-						<p class="sg">该设备的情况为：一切正常。</p>
-						<a class="btn" href="#">更多信息</a>							  
-				</div>
-                
-                <div class="col-md-3 service-grid">							 
-						<a href="#"><img src="images/s5.jpg" alt=""/></a>
-						<div class="tour-caption">
-						<p>该设备的情况为：一切正常。</p>
-						</div>
-						<h4>高温杀菌釜2</h4>
-						<p class="sg">该设备的情况为：一切正常。</p>
-						<a class="btn" href="#">更多信息</a>							  
-				</div>
-                
-                <div class="col-md-3 service-grid">							 
-						<a href="#"><img src="images/s5.jpg" alt=""/></a>
-						<div class="tour-caption">
-						<p>该设备的情况为：一切正常。</p>
-						</div>
-						<h4>包装机1</h4>
-						<p class="sg">该设备的情况为：一切正常。</p>
-						<a class="btn" href="#">更多信息</a>							  
-				</div>
-
-				<div class="col-md-3 service-grid">							 
-						<a href="#"><img src="images/s5.jpg" alt=""/></a>
-						<div class="tour-caption">
-						<p>该设备的情况为：一切正常。</p>
-						</div>
-						<h4>包装机2</h4>
-						<p class="sg">该设备的情况为：一切正常。</p>
-						<a class="btn" href="#">更多信息</a>							 
-				</div>
-
-				<div class="clearfix"></div>
-
-            </div>
 
 		</div>
 	</div>

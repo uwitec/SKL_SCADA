@@ -43,6 +43,7 @@
     <Compile Include="BatchFill.cs" />
     <Compile Include="BatchPack.cs" />
     <Compile Include="BatchRaw.cs" />
+    <Compile Include="MachineM.cs" />
     <Compile Include="ProcessMaterial.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="ProductProcess.cs" />
