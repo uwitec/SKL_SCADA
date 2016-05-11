@@ -39,7 +39,7 @@
 			</div>
             <div class="col-md-9 team-grid text-center">
             
-                <div class="bigBlock">									 
+                <div class="bigBlock">
 				    <h2>原材料批次信息录入</h2>
 				    <p class="text-left">在原材料批次录入过程中应该注意：批次号、原材料、数量、进入时间这四栏禁止为“空”，
                     否则无法提交，在预览确认无误以后，方可提交。否则无法录入数据库中。</p>

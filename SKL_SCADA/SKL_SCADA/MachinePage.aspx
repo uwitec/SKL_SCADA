@@ -12,7 +12,6 @@
                         3.高温杀菌釜监控;
                         4.包装机监控</p>
 			<div class="service-grids">
-            
                 <div class="col-md-3 service-grid">							 
 						<a href="MachineState.aspx?machineID=1"><img src="images/s3.jpg" alt=""/></a>
 						<div class="tour-caption">
@@ -22,7 +21,6 @@
 						<p class="sg">该设备的情况为：一切正常。</p>
 						<a class="btn" href="MachineState.aspx?machineID=1">更多信息</a>							  
 				</div>
-                
                 <div class="col-md-3 service-grid">							
 						<a href="MachineState.aspx?machineID=2"><img src="images/s4.jpg" alt=""/></a>
 						<div class="tour-caption">
@@ -32,7 +30,6 @@
 						<p class="sg">该设备的情况为：一切正常。</p>
 						<a class="btn" href="MachineState.aspx?machineID=2">更多信息</a>							  
 				</div>
-                
                 <div class="col-md-3 service-grid">							 
 						<a href="MachineState.aspx?machineID=3"><img src="images/s5.jpg" alt=""/></a>
 						<div class="tour-caption">
@@ -42,7 +39,6 @@
 						<p class="sg">该设备的情况为：一切正常。</p>
 						<a class="btn" href="MachineState.aspx?machineID=3">更多信息</a>							  
 				</div>
-
 				<div class="col-md-3 service-grid">							 
 						<a href="MachineState.aspx?machineID=4"><img src="images/s5.jpg" alt=""/></a>
 						<div class="tour-caption">
@@ -52,10 +48,8 @@
 						<p class="sg">该设备的情况为：一切正常。</p>
 						<a class="btn" href="MachineState.aspx?machineID=4">更多信息</a>							 
 				</div>
-
-				<div class="clearfix"></div>
+			    <div class="clearfix"></div>
 			</div>
-
 		</div>
 	</div>
 

@@ -50,7 +50,7 @@
                                     <Columns>
                                         <dx:ListBoxColumn FieldName="PID" Caption="产品编号" />
                                         <dx:ListBoxColumn FieldName="PName" Caption="产品名称" />
-                                        <dx:ListBoxColumn FieldName="PSpecification" Caption="备注" />
+                                        <dx:ListBoxColumn FieldName="PSpecification" Caption="规格" />
                                     </Columns>
                                 </dx:ASPxComboBox>
                                 <asp:SqlDataSource ID="SqlDataSource3" runat="server" 

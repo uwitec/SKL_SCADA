@@ -25,7 +25,6 @@
     <div class="container">	
 	    <div class="col-md-8 team-grid text-center">										 
 		    <h2>设备当前状态</h2>
-		    <p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum.</p>
             <div class="infoInput">
                 <div class="bigconBlock">
                     <dx:ASPxImage ID="ASPxImage1" runat="server" ShowLoadingImage="true" 
@@ -141,10 +140,10 @@
             <div class="team-sidebar">
 		        <h3>其他设备</h3>
 		        <ul>
-		        <li><a href="#"><span> </span>无菌灌装机</a></li>
-		        <li><a href="#"><span> </span>高温杀菌釜</a></li>
-		        <li><a href="#"><span> </span>机器人</a></li>
-		        <li><a href="#"><span> </span>包装机</a></li>
+		        <li><a href="MachineState.aspx?machineID=1"><span> </span>无菌灌装机</a></li>
+		        <li><a href="MachineState.aspx?machineID=2"><span> </span>高温杀菌釜</a></li>
+		        <li><a href="MachineState.aspx?machineID=3"><span> </span>机器人</a></li>
+		        <li><a href="MachineState.aspx?machineID=4"><span> </span>包装机</a></li>
 		        </ul>
 	        </div>
 	        <div class="clear"> </div>
@@ -155,39 +154,39 @@
 <!--history-->
 <div class="container">
 	 <div class="team-history">
-		<h3>历史状态</h3>
-		<div class="history-lines">
-		<ul>
-		<li class="date"><span>2016/1/30</span></li>
-		<li class="date-info"><p><label>consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</label>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aeonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi.</p></li>
-		</ul>
-		<div class="clearfix"> </div>
-		</div>
-		
-		<div class="history-lines">
-		<ul>
-		<li class="date"><span>2016/1/30</span></li>
-		<li class="date-info"><p><label>consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</label>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aeonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi.</p></li>
-		</ul>
-		<div class="clearfix"> </div>
-		</div>
-		
-		<div class="history-lines">
-		<ul>
-		<li class="date"><span>2016/1/30</span></li>
-		<li class="date-info"><p><label>consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</label>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aeonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi.</p></li>
-		</ul>
-		<div class="clearfix"> </div>
-		</div>
-		
-		<div class="history-lines">
-		<ul>
-		<li class="date"><span>2016/1/30</span></li>
-		<li class="date-info"><p><label>consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</label>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aeonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi.</p></li>
-		</ul>
-		<div class="clearfix"> </div>
-		</div>
-	 </div>
+        <h3>历史状态</h3>
+        <div class="history-lines">
+        <ul>
+        <li class="date"><span>2016/1/30</span></li>
+        <li class="date-info"><p><label>设备状态：正常；</label>开机状态：正常；报警状态：正常；运行状态正常；其他状态：正常；运动节拍数：8000000。</p></li>
+        </ul>
+        <div class="clearfix"> </div>
+        </div>
+        
+        <div class="history-lines">
+        <ul>
+        <li class="date"><span>2016/1/29</span></li>
+        <li class="date-info"><p><label>开机状态：正常；</label>开机状态：正常；报警状态：正常；运行状态正常；其他状态：正常；运动节拍数：8000000。</p></li>
+        </ul>
+        <div class="clearfix"> </div>
+        </div>
+        
+        <div class="history-lines">
+        <ul>
+        <li class="date"><span>2016/1/28</span></li>
+        <li class="date-info"><p><label>开机状态：正常；</label>开机状态：正常；报警状态：正常；运行状态正常；其他状态：正常；运动节拍数：8000000。</p></li>
+        </ul>
+        <div class="clearfix"> </div>
+        </div>
+        
+        <div class="history-lines">
+        <ul>
+        <li class="date"><span>2016/1/27</span></li>
+        <li class="date-info"><p><label>开机状态：正常；</label>开机状态：正常；报警状态：正常；运行状态正常；其他状态：正常；运动节拍数：8000000。</p></li>
+        </ul>
+        <div class="clearfix"> </div>
+        </div>
+     </div>
 </div>
 <!--history-->	
 </asp:Content>

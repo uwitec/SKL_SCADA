@@ -13,9 +13,9 @@ namespace SKL_SCADA
         {
 //            string machineID = Request.QueryString["machineID"];
             string machineID = "1";
-            BLL.MachineB.GetMachine(machineID);
-
-
+            MODEL.MachineM machineDetail = BLL.MachineB.GetMachine(machineID);
+            Label1.Text = machineDetail.MRemarks;
+            ASPxLabel1.Text = "8000";
 
         }
     }

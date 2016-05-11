@@ -41,83 +41,100 @@
                         <div class="conBlock">
                             <div class="conBlockL"><h3 class="text-left">批次号：</h3></div>
                             <div class="conBlockR">
-                                <dx:ASPxTextBox ID="ASPxTextBox1" runat="server" Width="100%" Height="30px" Theme="Glass">
+                                <dx:ASPxTextBox ID="ASPxTextBox1" ClientInstanceName="Pack1" runat="server" Width="100%" Height="30px" Theme="Glass">
                                 </dx:ASPxTextBox>
                             </div>
                         </div>
                         <div class="conBlock">
                             <div class="conBlockL"><h3 class="text-left">产品名称：</h3></div>
                             <div class="conBlockR">
-                                <dx:ASPxComboBox ID="ASPxComboBox1" runat="server" ValueType="System.String"
-                                Width="100%" Height="30px" Theme="Glass">
+                                <dx:ASPxComboBox ID="ASPxComboBox1" ClientInstanceName="Pack2" runat="server"
+                                Width="100%" Height="30px" Theme="Glass" DataSourceID="SqlDataSource1" 
+                                TextFormatString="{0}|{1}|{2}" >
+                                    <Columns>
+                                        <dx:ListBoxColumn FieldName="PID" Caption="产品编号" />
+                                        <dx:ListBoxColumn FieldName="PName" Caption="产品名称" />
+                                        <dx:ListBoxColumn FieldName="PSpecification" Caption="规格" />
+                                    </Columns>
                                 </dx:ASPxComboBox>
-                            </div>
-                        </div>
-                        <div class="conBlock">
-                            <div class="conBlockL"><h3 class="text-left">产品规格：</h3></div>
-                            <div class="conBlockR">
-                                <dx:ASPxComboBox ID="ASPxComboBox2" runat="server" ValueType="System.String"
-                                Width="100%" Height="30px" Theme="Glass">
-                                </dx:ASPxComboBox>
+                                <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                                    ConnectionString="<%$ ConnectionStrings:SKL_SCADAConnectionString %>" 
+                                    SelectCommand="SELECT [PID],[PName],[PSpecification] FROM [Product]">
+                                </asp:SqlDataSource>
                             </div>
                         </div>
                         <div class="conBlock">
                             <div class="conBlockL"><h3 class="text-left">包装规格：</h3></div>
                             <div class="conBlockR">
-                                <dx:ASPxTextBox ID="ASPxTextBox3" runat="server" Width="100%" Height="30px" Theme="Glass">
+                                <dx:ASPxTextBox ID="ASPxTextBox3" ClientInstanceName="Pack3" runat="server" Width="100%" Height="30px" Theme="Glass">
                                 </dx:ASPxTextBox>
                             </div>
                         </div>
                         <div class="conBlock">
                             <div class="conBlockL"><h3 class="text-left">批次数量：</h3></div>
                             <div class="conBlockR">
-                                <dx:ASPxTextBox ID="ASPxTextBox15" runat="server" Width="100%" Height="30px" Theme="Glass">
+                                <dx:ASPxTextBox ID="ASPxTextBox15" ClientInstanceName="Pack4" runat="server" Width="100%" Height="30px" Theme="Glass">
                                 </dx:ASPxTextBox>
                             </div>
                         </div>
                         <div class="conBlock">
                             <div class="conBlockL"><h3 class="text-left">开始时间：</h3></div>
                             <div class="conBlockR">
-                                <dx:ASPxTextBox ID="ASPxTextBox16" runat="server" Width="100%" Height="30px" Theme="Glass">
-                                </dx:ASPxTextBox>
+                                <dx:ASPxDateEdit ID="ASPxDateEdit1" ClientInstanceName="Pack5" runat="server" Width="100%" Height="30px" Theme="Glass">
+                                </dx:ASPxDateEdit>
                             </div>
                         </div>
                         <div class="conBlock">
                             <div class="conBlockL"><h3 class="text-left">结束时间：</h3></div>
                             <div class="conBlockR">
-                                <dx:ASPxTextBox ID="ASPxTextBox17" runat="server" Width="100%" Height="30px" Theme="Glass">
-                                </dx:ASPxTextBox>
+                                <dx:ASPxDateEdit ID="ASPxDateEdit2" ClientInstanceName="Pack6" runat="server" Width="100%" Height="30px" Theme="Glass">
+                                </dx:ASPxDateEdit>
                             </div>
                         </div>
                         <div class="conBlock">
                             <div class="conBlockL"><h3 class="text-left">备注：</h3></div>
                             <div class="conBlockR">
-                                <dx:ASPxTextBox ID="ASPxTextBox2" runat="server" Width="100%" Height="30px" Theme="Glass">
+                                <dx:ASPxTextBox ID="ASPxTextBox2" ClientInstanceName="Pack7" runat="server" Width="100%" Height="30px" Theme="Glass">
                                 </dx:ASPxTextBox>
                             </div>
                         </div>
                         <div class="conBlock">
                             <div class="conBlockL"></div>
                             <div class="conBlockR">
-                                <dx:ASPxButton ID="ASPxButton1" runat="server" Text="插入记录" Width="100%" Height="30px" Theme="Glass">
+                                <dx:ASPxButton ID="ASPxButton1" AutoPostBack="False" runat="server" Text="插入包装记录" Width="100%" Height="30px" Theme="Glass">
+                                    <ClientSideEvents Click="function(s, e) {
+                                    Grid1.PerformCallback(
+                                    Pack1.GetText()+'|'+
+                                    Pack2.GetText()+'|'+
+                                    Pack3.GetText()+'|'+
+                                    Pack4.GetText()+'|'+
+                                    Pack5.GetText()+'|'+
+                                    Pack6.GetText()+'|'+
+                                    Pack7.GetText()+'|'+'add');
+                                    }"/>
                                 </dx:ASPxButton>
                             </div>
                         </div>
                         <div class="conBlock">
                             <div class="conBlockL"></div>
                             <div class="conBlockR">
-                                <dx:ASPxButton ID="ASPxButton2" runat="server" Text="录入数据库" Width="100%" Height="30px" Theme="Glass">
+                                <dx:ASPxButton ID="ASPxButton2" AutoPostBack="False" runat="server" Text="录入数据库" Width="100%" Height="30px" Theme="Glass">
+                                    <ClientSideEvents Click="function(s, e) {Grid1.PerformCallback('|||||||||drop');}"></ClientSideEvents>
                                 </dx:ASPxButton>
                             </div>
                         </div>
                     </div>
                     <div class="infoCheck">
-                        <dx:ASPxGridView ID="ASPxGridView1" runat="server" AutoGenerateColumns="False" 
-                            EnableTheming="True" Theme="Glass" Width="100%" Font-Size="14px">
+                        <dx:ASPxGridView ID="ASPxGridView1" ClientInstanceName="Grid1" runat="server" AutoGenerateColumns="False" 
+                            EnableTheming="True" Theme="Glass" Width="100%" Font-Size="14px" 
+                            oncustomcallback="ASPxGridView1_CustomCallback"
+                            KeyFieldName="BPID" onrowdeleting="ASPxGridView1_RowDeleting" >
                             <Columns>
                                 <dx:GridViewDataTextColumn Caption="包装批次号" FieldName="BPName" VisibleIndex="0">
                                 </dx:GridViewDataTextColumn>
-                                <dx:GridViewDataTextColumn Caption="产品名称" FieldName="PID" VisibleIndex="1">
+                                <dx:GridViewDataTextColumn Caption="产品编号" FieldName="PID" Visible="False" VisibleIndex="1">
+                                </dx:GridViewDataTextColumn>
+                                <dx:GridViewDataTextColumn Caption="产品名称" FieldName="PName" VisibleIndex="1">
                                 </dx:GridViewDataTextColumn>
                                 <dx:GridViewDataTextColumn Caption="产品规格" FieldName="PSpecification" VisibleIndex="2">
                                 </dx:GridViewDataTextColumn>
@@ -129,9 +146,17 @@
                                 </dx:GridViewDataTextColumn>
                                 <dx:GridViewDataTextColumn Caption="结束时间" FieldName="PackEndTime" VisibleIndex="6">
                                 </dx:GridViewDataTextColumn>
-                                <dx:GridViewDataTextColumn Caption="备注" FieldName="PackRRemarks" VisibleIndex="7">
+                                <dx:GridViewDataTextColumn Caption="备注" FieldName="PackRemarks" VisibleIndex="7">
+                                </dx:GridViewDataTextColumn><dx:GridViewCommandColumn Caption="操作" ShowSelectCheckbox="True" 
+                                    VisibleIndex="6">
+                                    <DeleteButton Text="删除" Visible="True">
+                                    </DeleteButton>
+                                </dx:GridViewCommandColumn>
+                                <dx:GridViewDataTextColumn FieldName="BPID" Visible="False" VisibleIndex="7">
                                 </dx:GridViewDataTextColumn>
                             </Columns>
+                            <SettingsBehavior ConfirmDelete="False" AllowFocusedRow="True" 
+                                AllowSelectByRowClick="True" AllowSelectSingleRowOnly="True" />
                         </dx:ASPxGridView>
                     </div>
                 </div>

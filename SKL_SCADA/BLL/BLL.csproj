@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BatchCheckB.cs" />
     <Compile Include="FillUtilityB.cs" />
     <Compile Include="MachineB.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
